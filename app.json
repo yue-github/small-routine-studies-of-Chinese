@@ -68,7 +68,11 @@
         "selectedIconPath": "Pages/image/otherChange.png"
       }
     ]
-  }
+  },
+    "networkTimeout": {
+      "request": 10000,
+      "downloadFile": 10000
+    }
 
   
 }

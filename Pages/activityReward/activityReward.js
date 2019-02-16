@@ -8,7 +8,7 @@ Page({
       activeData:{
         title:"活动抢奖品",
         content:"本次活动将现场发放奖品",
-        condition:'通过进入小程序签到',
+        condition:'通过进入小程序签到,积分点至少达到8',
         time:'2019-2-21',
         place:"广东省广州市"
       }

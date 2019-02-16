@@ -9,6 +9,7 @@
   overflow: hidden;
 }
 .changeFont{
+  width:50rpx;
   color:#fff;
   font-size:50rpx;
 }

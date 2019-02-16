@@ -57,6 +57,15 @@ Page({
             openid: app.globalData.idObj.openid,
             nowTimeStamp: (new Date()).getTime()/1000
           },
+          fail(){
+            wx.hideLoading();
+            wx.showToast({
+              title: "签到失败",
+              image: "../image/sad.png",
+              duration: 2000,
+              mask: true,
+            })
+          },
           success(data){
             if(data.data.status==200){
               wx.hideLoading();

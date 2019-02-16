@@ -1,8 +1,8 @@
 <view class="container">
     <view class="search">
-          <view class="search-font">
+          <view class="search-font" catchtap='goSearch'>
               <text class="fa fa-search font-right"></text>
-              <text class="font-small" catchtap='goSearch'>搜索内容</text>
+              <text class="font-small">搜索内容</text>
           </view>
           <view class="search-right">
               <text class="fa fa-calendar-check-o" catchtap="goRegister"></text>
