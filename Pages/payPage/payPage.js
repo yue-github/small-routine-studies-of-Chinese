@@ -5,7 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    lineBool:false
+    lineBool:false,
+    imgalist: ['https://miao.su/images/2019/02/16/zhie525e.jpg','https://miao.su/images/2019/02/16/weixin4851e.jpg']
+  },
+  pre(){
+    var imgSrc = this.data.lineBool == false ? "https://miao.su/images/2019/02/16/weixin4851e.jpg" :"https://miao.su/images/2019/02/16/zhie525e.jpg";
+    wx.previewImage({
+      current: imgSrc, // 当前显示图片的http链接   
+      urls: this.data.imgalist // 需要预览的图片http链接列表   
+    }) 
   },
   changePay(data){
     const who = data.currentTarget.dataset.who;
@@ -30,6 +38,11 @@ Page({
   goHome() {
     wx.reLaunch({
       url: '../newPage/newPage',
+    })
+  },
+  gosaoma() {
+    wx.reLaunch({
+      url: '../saoma/saoma'
     })
   },
   makeMoney() {

@@ -1,0 +1,32 @@
+@import "../template-navHead/template-navHead.wxss";
+.title{
+  text-align:center;
+  font-size:25rpx;
+  color:#ccc;
+  margin-top:18rpx;
+}
+.img-main{
+  width:700rpx;
+  height:700rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin:0 auto;
+  margin-top:68rpx;
+}
+.erweima{
+    width:500rpx;
+    height:500rpx;
+}
+.long{
+  width:100rpx;
+  height:100rpx;
+}
+.imgLogo{
+  width:100%;
+  display:flex;
+}
+.toRight{
+  margin-left:auto;
+}

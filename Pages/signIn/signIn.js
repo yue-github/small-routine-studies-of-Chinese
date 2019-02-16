@@ -40,6 +40,11 @@ Page({
       url: '../newPage/newPage'
     })
   },
+  gosaoma(){
+    wx.reLaunch({
+      url: '../saoma/saoma'
+    })
+  },
   goHome(){
     wx.switchTab({
       url: '../newPage/newPage',

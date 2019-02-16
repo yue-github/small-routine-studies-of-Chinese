@@ -17,7 +17,7 @@
             </view>
       </view>
       <view class="image-main">
-          <image src="{{lineBool==false?'../image/weixin.jpg':'../image/zhi.jpg'}}" class="pay-img"></image>
+          <image src="{{lineBool==false?'../image/weixin.jpg':'../image/zhi.jpg'}}" class="pay-img" bindtap="pre"></image>
           <view class="warn">*温馨提示：请长按图片识别二维码或者扫码支付</view>
       </view>
       

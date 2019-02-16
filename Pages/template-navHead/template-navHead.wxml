@@ -4,7 +4,7 @@
             <view class="head-right">
                   <view class="head-nav-font" catchtap="goMyIntegral">我的积分</view>
                   <text class="suLine">|</text>
-                  <view class="head-nav-font">扫码进入</view>
+                  <view class="head-nav-font" catchtap="gosaoma">扫码进入</view>
                   <text class="suLine">|</text>
                   <view class="head-nav-font" catchtap="makeMoney">推广赚钱</view>
                   <text class="suLine">|</text>

@@ -2,9 +2,9 @@
 
 <view class="index-container">
       <view>
-          <image src="../image/loves.png" class="logo"></image>
-          <image src="../image/loves.png" class="logo"></image>
-          <image src="../image/loves.png" class="logo"></image>
+          <image src="https://miao.su/images/2019/02/16/loves0aa20.png" class="logo"></image>
+          <image src="https://miao.su/images/2019/02/16/loves0aa20.png" class="logo"></image>
+          <image src="https://miao.su/images/2019/02/16/loves0aa20.png" class="logo"></image>
       </view>
       
       <view class="title">

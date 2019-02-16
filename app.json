@@ -1,15 +1,17 @@
 {
   "pages":[
     "Pages/newPage/newPage",
+    "Pages/saoma/saoma",
     "Pages/payPage/payPage",
     "Pages/class/class",
+    "Pages/index/index",
     "Pages/activityReward/activityReward",
     
     "Pages/integral/integral",
     "Pages/signIn/signIn",
     
     "Pages/shop/shop",
-    "Pages/index/index",
+    
     "Pages/msg/msg",
     "Pages/my/my",
     "Pages/other/other"

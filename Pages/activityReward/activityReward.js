@@ -24,6 +24,11 @@ Page({
       url: '../newPage/newPage',
     })
   },
+  gosaoma() {
+    wx.reLaunch({
+      url: '../saoma/saoma'
+    })
+  },
   makeMoney() {
     wx.showModal({
       title: '推广赚钱',

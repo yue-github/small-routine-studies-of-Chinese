@@ -10,22 +10,22 @@ Page({
     loveContent:[],
     bannerSrc:[
       {
-        url:'../image/banner1.jpg'
+        url:'https://miao.su/images/2019/02/16/banner358a97.jpg'
       },
       {
-        url: '../image/banner2.jpg'
+        url: 'https://miao.su/images/2019/02/16/banner21589a.jpg'
       },
       {
-        url: '../image/banner3.jpg'
+        url: 'https://miao.su/images/2019/02/16/banner150739.jpg'
       },
       {
-        url: '../image/banner1.jpg'
+        url: 'https://miao.su/images/2019/02/16/banner358a97.jpg'
       },
       {
-        url: '../image/banner2.jpg'
+        url: 'https://miao.su/images/2019/02/16/banner21589a.jpg'
       },
       {
-        url: '../image/banner3.jpg'
+        url: 'https://miao.su/images/2019/02/16/banner150739.jpg'
       }
     ],
     bagua:'../image/bagua.png',

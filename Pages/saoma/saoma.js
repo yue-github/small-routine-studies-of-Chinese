@@ -1,20 +1,21 @@
-var app = getApp();
+// Pages/saoma/saoma.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    integral:''
+    imgalist: ["https://miao.su/images/2019/02/16/erweima1c86f.jpg"]
+  },
+  pre(){
+    wx.previewImage({
+      current: "https://miao.su/images/2019/02/16/erweima1c86f.jpg", // 当前显示图片的http链接   
+      urls: this.data.imgalist // 需要预览的图片http链接列表   
+    }) 
   },
   goTabBar() {
     wx.reLaunch({
       url: '../newPage/newPage',
-    })
-  },
-  gosaoma() {
-    wx.reLaunch({
-      url: '../saoma/saoma'
     })
   },
   goHome() {
@@ -28,42 +29,23 @@ Page({
       content: '此功能暂未开放，请耐心等待！'
     })
   },
+  goMyIntegral() {
+    wx.reLaunch({
+      url: '../integral/integral'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
-    if(options.options==1){
-      
-      wx.showToast({
-        title: "签到成功",
-        icon: "success",
-        image: '../image/sign.png',
-        duration: 2500,
-        mask: true
-      })
-    }
-    
-    wx.request({
-      url: 'http://localhost/geomancy/public/api/user/getIntegral',
-      method: 'POST',
-      data: {
-        openid: app.globalData.idObj.openid
-      },
-      success:data=> {
-        this.setData({
-          integral: data.data.integral[0]
-        })
-      }
-    })
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-   
-    
+
   },
 
   /**

@@ -1,0 +1,18 @@
+<import src="../template-navHead/template-navHead.wxml" />
+<view class="container">
+  <view class="head">
+    <template is="t-navHead" />
+  </view>
+  <view class="title">*温馨提示：请扫描下方二维码进入小程序</view>
+  <view class="img-main">
+      <view class="imgLogo">
+          <image class="long" src="https://miao.su/images/2019/02/16/longLeft732ff.md.png"></image>
+          <image class="long toRight" src="https://miao.su/images/2019/02/16/longfad55.md.png"></image>
+      </view>
+      <image class="erweima" src="../image/erweima.jpg" bindtap="pre"></image>
+      <view class="imgLogo">
+          <image class="long" src="https://miao.su/images/2019/02/16/longLeft732ff.md.png"></image>
+          <image class="long toRight" src="https://miao.su/images/2019/02/16/longfad55.md.png"></image>
+      </view>
+  </view>
+</view>
