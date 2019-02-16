@@ -1,0 +1,30 @@
+<import src="../template-navHead/template-navHead.wxml" />
+<view class="container">
+  <view class="head">
+    <template is="t-navHead" />
+  </view>
+  <view class="active">
+    <view class="active-title">{{activeData.title}}</view>
+    <view class="active-bott">
+      <image src="../image/active.jpg" class="active-img"></image>
+      <view class="line-height">
+        <view class="active-content">活动说明：
+          <text class="active-font">{{activeData.content}}</text>
+        </view>
+        <view class="active-time">活动时间：
+          <text class="active-font">{{activeData.time}}</text>
+        </view>
+        <view class="active-time">活动地址：
+          <text class="active-font">{{activeData.place}}</text>
+        </view>
+        <view class="active-condition">奖品条件：
+          <text class="active-font">{{activeData.condition}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="join-center">
+        <text class="join" catchtap="goSign">参与</text>
+    </view>
+  </view>
+
+</view>

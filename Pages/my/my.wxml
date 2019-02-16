@@ -1,0 +1,14 @@
+<!--Pages/shop/shop.wxml-->
+<view class="container">
+      <view class="head">
+          欢迎来到我的中心模块
+      </view>
+      <view class="line"></view>
+      <view class="center">
+          <image src="../image/sorry.png" class="center-img"></image>
+          <text class="center-space">
+                我的中心暂时不能设置，请耐心等待...
+          </text>   
+      </view>
+</view>
+

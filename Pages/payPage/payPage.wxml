@@ -1,0 +1,24 @@
+<import src="../template-navHead/template-navHead.wxml"/>
+ <view class="container">
+      <view class="head">
+            <template is="t-navHead"/> 
+      </view>
+      <view class="payTitle">
+            <icon type="success" size="28" color="rgb(2,8,F,F,2,8)" class="pay-success"/>支付页面
+      </view>
+      <view class="nav-pay">
+            <view catchtap="changePay" data-who="weixin">
+                  <text class="pay-font">微信支付</text>
+                  <view class="bottom-line" wx:if="{{lineBool==true?false:true}}"></view>
+            </view>
+             <view catchtap="changePay" data-who="zhi">
+                  <text class="pay-font-zhi">支付宝支付</text>
+                  <view class="bottom-line bottom-line-blue" wx:if="{{lineBool}}"></view>
+            </view>
+      </view>
+      <view class="image-main">
+          <image src="{{lineBool==false?'../image/weixin.jpg':'../image/zhi.jpg'}}" class="pay-img"></image>
+          <view class="warn">*温馨提示：请长按图片识别二维码或者扫码支付</view>
+      </view>
+      
+ </view>

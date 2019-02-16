@@ -1,0 +1,27 @@
+<import src="../template-navHead/template-navHead.wxml"/>
+<view class="container">
+  <view class="head">
+      <template is="t-navHead"/> 
+  </view>
+
+  <view>
+    <view class="data-title">{{year}}年{{month}}月{{day}}日</view>
+    <view class="sign-main">
+          <view class="sign-main-title">每8小时签到加<text class="changeColor">积分</text></view>
+          <view class="sign-font" catchtap="sign">签到</view>
+    </view>
+    <view class="sign-picker">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="sign-picker">
+      <picker-view-column>
+        <view wx:for="{{years}}" style="line-height: 50px" wx:key="key">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" style="line-height: 50px" wx:key="key">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" style="line-height: 50px" wx:key="key">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+    </view>
+  </view>
+</view>

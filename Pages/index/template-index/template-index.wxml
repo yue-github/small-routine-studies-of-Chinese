@@ -1,0 +1,6 @@
+<template name="nihaoshijie"> 
+  <view class="nihao-main">
+      <text class="nihao">you are</text>
+      <text class="shijie">my world!</text>
+  </view>
+</template>

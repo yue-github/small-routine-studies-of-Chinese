@@ -1,0 +1,13 @@
+<!--Pages/shop/shop.wxml-->
+<view class="container">
+      <view class="head">
+          欢迎来到购物商城
+      </view>
+      <view class="line"></view>
+      <view class="center">
+          <image src="../image/sorry.png" class="center-img"></image>
+          <text class="center-space">
+                商品已售空，请耐心等待商品上架...
+          </text>   
+      </view>
+</view>

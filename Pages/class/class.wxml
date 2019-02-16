@@ -1,0 +1,49 @@
+<import src="../template-navHead/template-navHead.wxml" />
+<view class="container">
+  <view class="head">
+    <template is="t-navHead" />
+  </view>
+  <view class="search">
+      <view class="search-main">
+          <icon type="search" size="18" class="search-icon" color="rgb(c,c,c)"/>
+          <input maxlenth="255" placeholder='请输入关键内容' class="search-input"></input>
+      </view>
+      <view class="search-font">搜索</view>
+  </view> 
+  <view class="split"></view>
+  <view class="nav-class">
+      <view class="nav-child changeColor">全部<view class="warn-line"></view></view>
+      <view class="nav-child">视频</view>
+      <view class="nav-child">音频</view>
+      <view class="nav-child">文章</view>
+  </view>
+  <view class="class-container">
+  <block wx:for="{{classData}}" wx:key="key">
+      <view class="class-detail">
+          <image src="{{item.src}}" class="detail-img"></image>
+          <view class="class-right">
+              <view class="class-top">
+                  <text class="className">{{item.className}}</text>
+                  <text class="pay" catchtap='goPay'>购买</text>
+              </view>
+              <view class="class-center">
+                   <text class="price">￥<text class="price-detail">{{item.price}}</text></text>
+                   <text wx:if="{{item.boo}}" class="introdece">{{item.introduce}}</text>
+              </view>
+              <view class="class-foot">
+                 <view class="float-left">
+                      <text class="fa fa-user-circle-o"></text>
+                      <text class="class-foot-margin">{{item.name}}</text>
+                 </view>
+                 
+                 <view class="float-right">
+                      <text class="fa fa-eye"></text>
+                      <text class="class-foot-margin">{{item.eyes}}</text>
+                 </view>
+                 
+              </view>
+          </view>
+      </view>
+  </block>
+  </view>
+</view>

@@ -1,0 +1,50 @@
+@import "../template-navHead/template-navHead.wxss";
+.pay-success{
+  margin-right:10rpx;
+}
+.payTitle{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:18rpx;
+}
+.nav-pay{
+  display:flex;
+  justify-content: space-between;
+  font-size:30rpx;
+  margin-top:28rpx;
+  padding:0 150rpx;
+}
+.bottom-line{
+  width:140%;
+  margin-left:-20%;
+  height:3rpx;
+  background:#28FF28;
+  margin-top:18rpx;
+}
+.pay-font{
+  color:#28FF28;
+}
+.pay-font-zhi{
+  color:#55b7f5;
+}
+.bottom-line-blue{
+  background:#55b7f5;
+}
+.image-main{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top:58rpx;
+}
+.pay-img{
+  width:600rpx;
+  height:800rpx;
+}
+.warn{
+  color:#999999;
+  margin-top:10rpx;
+  font-size:25rpx;
+  
+}

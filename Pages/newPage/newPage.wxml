@@ -1,0 +1,132 @@
+<view class="container">
+    <view class="search">
+          <view class="search-font">
+              <text class="fa fa-search font-right"></text>
+              <text class="font-small" catchtap='goSearch'>搜索内容</text>
+          </view>
+          <view class="search-right">
+              <text class="fa fa-calendar-check-o" catchtap="goRegister"></text>
+          </view>
+    </view>
+    <view class="join">
+         <image src="{{bagua}}" class="join-img"></image>
+         <view class="join-center">
+              <view>{{groupName}}</view>
+              <view class="how-people">已有{{people}}人加入</view>
+         </view> 
+         <view class="join-font" bindtap="joinUs">
+              点击加入
+         </view> 
+         <image src="../image/road.png" class="road"></image>
+    </view>
+    <swiper class="banner-swiper" 
+    indicator-dots="{{dots}}" autoplay="{{autoplay}}"
+    interval="{{interval}}" indicator-color="{{indicatorColor}}"
+    indicator-active-color="{{indicatorActiveColor}}"
+    circular="{{circular}}"
+    >
+   
+    <block wx:for="{{bannerSrc}}" wx:key='key' wx:for-item='item'>
+        <swiper-item>
+              <image src="{{item.url}}"></image>
+        </swiper-item>
+    </block>
+    </swiper>
+
+
+    <view class="nav">
+        <block wx:for="{{navData}}" wx:key="key">
+        <view class="nav-child" catchtap="goClass" data-newid="{{item.id}}">
+              <view class="nav-fa">
+                    <text class="{{item.fontClassName}}"></text>
+              </view>
+              
+              <view class="nav-font">{{item.navName}}</view>
+        </view>
+        </block>
+    </view>
+
+
+    <!-- 专栏 -->
+    <view class="column">
+          <view class="column-title">
+                <text class="zhuanlan">专栏</text>
+                <text class="special">
+                      {{special}}
+                </text>
+                <view class="column-more" catchtap="goMoreColumn">更多专栏</view>
+          </view>
+          <view class="column-main">
+          <block wx:for="{{columnData}}" wx:key="key">
+          
+            <view class="column-content" data-id="{{item.id}}" catchtap="goColumnDetail">
+                  <view class="column-img">
+                      <image src="{{item.url}}" class="img-detail"></image>
+                      <view class="column-status">已抢购完...</view>
+                  </view>
+                  <view class="whoColumn">{{item.whoColumn}}</view>
+                  <view class="class-msg">
+                      <view class="howPeople">{{item.howPeople}}人已购买</view>
+                      <view class="price">
+                          ￥<text class="price-font">{{item.price}}</text>
+                      </view>
+                  </view>
+            
+          </view>
+          </block>
+          </view>
+    </view> 
+
+<!-- 国学语录 -->
+    
+    <view class="culture">
+      <view class="culture-title">
+                <view class="mingshi">名师语录</view>
+                <text class="cultureSpecial">
+                      {{cultureSpecial}}
+                </text>
+                <view class="column-more culture-more" catchtap="goMoreCulture">更多语录</view>
+      </view>
+      <block wx:for="{{talkData}}" wx:key="key">
+      <view class="content-detail change-marginTop">
+            <view class="detail-title">
+                  <image src="{{item.userLogo}}" class="user-logo"></image>
+                  <text class="user-name">{{item.userName}}</text>
+                  <text>{{item.date}}</text>
+            </view>
+            <view class="content-title">{{item.title}}</view>
+            <image src="{{item.titleImage}}" class="user-img"></image>
+            <view class="love-detail">
+                {{item.contentDetail}}
+            </view>
+            <view class="comment">
+                <text class="fa fa-star changeFont"></text>
+                <text class="changeSmall">{{item.star}}</text>
+                <text class="fa fa-comments changeFont"></text>
+                <text class="changeSmall">{{item.comments}}</text>
+            </view>
+      </view>
+      </block>
+    </view>
+
+    <block wx:for="{{loveContent}}" wx:key="key">
+    <view class="content-detail">
+          <view class="detail-title">
+                <image src="{{item.userLogo}}" class="user-logo"></image>
+                <text class="user-name">{{item.userName}}</text>
+                <text>{{item.date}}</text>
+          </view>
+          <view class="content-title">{{item.title}}</view>
+          <image src="{{item.titleImage}}" class="user-img"></image>
+          <view class="love-detail">
+               {{item.contentDetail}}
+          </view>
+          <view class="comment">
+              <text class="fa fa-star changeFont"></text>
+              <text class="changeSmall">{{item.star}}</text>
+              <text class="fa fa-comments changeFont"></text>
+              <text class="changeSmall">{{item.comments}}</text>
+          </view>
+    </view>
+    </block>
+</view>

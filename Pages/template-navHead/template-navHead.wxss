@@ -1,0 +1,29 @@
+.head{
+  width:100%;
+  height:53rpx;
+  box-sizing:border-box;
+  background:#55b7f5;
+  display:flex;
+  align-items: center;
+  padding:5rpx;
+  overflow: hidden;
+}
+.changeFont{
+  color:#fff;
+  font-size:50rpx;
+}
+.head-right{
+    display:flex;
+    font-size:23rpx;
+    color:#fff;
+    align-items: center;
+    letter-spacing: 2rpx;
+    margin-left:auto;
+    margin-right:-20rpx;
+}
+.head-nav-font{
+    width:150rpx;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}

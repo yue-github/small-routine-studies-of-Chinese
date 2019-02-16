@@ -1,0 +1,31 @@
+@import "template-index/template-index.wxss";
+.index-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing:border-box;
+  padding-top:100rpx;
+}
+.logo{
+  width:50rpx;
+  height:50rpx;
+}
+.title{
+  font-size:33rpx;
+}
+.share-btn{
+  width:300rpx;
+  height:50rpx;
+  margin-top:250rpx;
+  text-align: center;
+  border-radius:10px;
+  box-shadow:4px 2px 6px #333333;
+  opacity:0.8;
+  
+}
+.qing{
+  margin-top:50rpx;
+  width:600rpx;
+  height:200px
+}
+ 

@@ -1,0 +1,60 @@
+@import "../template-navHead/template-navHead.wxss";
+.inte-main{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:50rpx;
+  font-size:30rpx;
+  color:#333333;
+  padding:18rpx;
+  line-height:100rpx;
+  position:relative;
+}
+.inte-background{
+  position:absolute;
+  top:0;
+  left:63rpx;
+  opacity:0.6;
+}
+.change-color1{
+  color:#0033ff;
+  font-size:80rpx;
+}
+.change-color2{
+  color:#ff6633;
+  font-size:50rpx;
+}
+.change-color3{
+  color:#33ffcc;
+  font-size:40rpx;
+}
+.grow{
+  margin-right:auto;
+   margin-left:30rpx;
+   margin-top:20rpx;
+}
+.time{
+  margin-left:auto;
+  margin-right:30rpx;
+}
+.tuo{
+  height:600rpx;
+  width:350rpx;
+}
+.sign-time{
+   color:#333333;
+}
+.time-sign{
+  position:relative;
+}
+.sign-last{
+  position:absolute;
+  top:100rpx;
+  left:300rpx;
+   
+}
+.sign-font{
+  font-size:20rpx;
+  color:#999999;
+}

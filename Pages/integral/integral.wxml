@@ -1,0 +1,18 @@
+<import src="../template-navHead/template-navHead.wxml"/>
+<view class="head">
+      <template is="t-navHead"/> 
+</view>
+<view class="inte-main">
+    <image class="inte-background" src="../image/rotate.png"></image>
+    <view class="inte">当前积分点为：<text class="change-color1">{{integral.points}}</text></view>
+    <view class="grow">当前每8小时可领积分：<text class="change-color2">{{integral.addPoint}}</text></view>
+    <view class="time">共签到次数：<text class="change-color3">{{integral.the_time}}</text></view>
+</view>
+<view class="time-sign">
+    <image src="../image/fo.png" class="tuo"></image>
+    <view class="sign-last">
+        <view class="sign-font">上次签到时间</view>
+        <text class="sign-time">{{integral.signDate}}</text>
+    </view>
+    
+</view>

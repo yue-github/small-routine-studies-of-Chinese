@@ -1,0 +1,11 @@
+.nihao-main{
+  margin-top:50rpx;
+  font-style: italic;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.nihao{
+  margin-right:10rpx;
+}
+ 

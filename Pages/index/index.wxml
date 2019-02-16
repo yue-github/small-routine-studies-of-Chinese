@@ -1,0 +1,18 @@
+<import src="template-index/template-index.wxml"/>
+
+<view class="index-container">
+      <view>
+          <image src="../image/loves.png" class="logo"></image>
+          <image src="../image/loves.png" class="logo"></image>
+          <image src="../image/loves.png" class="logo"></image>
+      </view>
+      
+      <view class="title">
+          <text>曾经你我</text>
+      </view>
+      <template is="nihaoshijie"/>
+      <view class="share-btn" catchtap="goNewPage">
+          <text>分享快乐时光</text>
+      </view>
+      <image src="../image/qing.jpg" class="qing"></image>
+</view>
