@@ -59,23 +59,36 @@ App({
       }
     })
     // 获取小程序码
+    return;
     var that=this;
     wx.request({
       url: 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' + this.globalData.appid+'&secret='+this.globalData.secret,
       method:"GET",
       success:data=>{
         var access_token=data.data.access_token;
-        console.log(access_token)
+        var json = {
+          access_token: access_token,
+          scene: "123782423dncsdjfs",
+          path: "Pages/newPage/newPage"
+        };
           wx.request({
             url: "https://api.weixin.qq.com/cgi-bin/wxaapp/createwxaqrcode?access_token=" + access_token,
             method:"POST",
-            data:{
-              access_token: access_token,
-              path:"Pages/newPage/newPage"
-            },
+            data:json,
+            responseType: 'stream',
             success:data=>{
-               
-              this.globalData.erweima = "data:image/jpeg;base64," + encodeURI(data.data);
+              
+              wx.request({
+                url: 'http://localhost/geomancy/public/api/change2Code',
+                method:"POST",
+                data:{
+                  code:encodeURI(data.data)
+                },
+                success:res=>{
+                    console.log(res)
+                }
+              })
+              // this.globalData.erweima = "data:image/jpeg;base64," + encodeURI(data.data);
               
             }
           })
