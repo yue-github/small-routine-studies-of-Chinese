@@ -2,7 +2,8 @@ const date = new Date()
 const years = []
 const months = []
 const days = []
-var app = getApp();     // 取得全局App
+var app = getApp();
+var domain=app.globalData.domain     // 取得全局App数据
 
 for (let i = 1990; i <= date.getFullYear(); i++) {
   years.push(i)
@@ -56,7 +57,7 @@ Page({
       mask:true,
       success(){
         wx.request({
-          url: 'http://localhost/geomancy/public/api/user/sign',
+          url: domain+'/api/user/sign',
           method:"POST",
           data:{
             openid: app.globalData.idObj.openid,

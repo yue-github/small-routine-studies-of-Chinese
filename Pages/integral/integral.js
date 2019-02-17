@@ -1,4 +1,5 @@
 var app = getApp();
+var domain=app.globalData.domain;
 Page({
 
   /**
@@ -44,7 +45,7 @@ Page({
     }
     
     wx.request({
-      url: 'http://localhost/geomancy/public/api/user/getIntegral',
+      url: domain+'/api/user/getIntegral',
       method: 'POST',
       data: {
         openid: app.globalData.idObj.openid

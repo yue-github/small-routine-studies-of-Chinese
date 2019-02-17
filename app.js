@@ -5,7 +5,8 @@ App({
     userInfo: null,
     appid: "wxcdcea82c094087d6",
     secret: "9850092e558a13e91cbe2cfce87eda31",
-    idObj:{}
+    idObj:{},
+    domain:'http://localhost/geomancy/public'
   },
   onLaunch: function () {
     // 展示本地存储能力
