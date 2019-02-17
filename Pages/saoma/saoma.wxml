@@ -9,7 +9,7 @@
           <image class="long" src="https://miao.su/images/2019/02/16/longLeft732ff.md.png"></image>
           <image class="long toRight" src="https://miao.su/images/2019/02/16/longfad55.md.png"></image>
       </view>
-      <image class="erweima" src="../image/erweima.jpg" bindtap="pre"></image>
+      <image class="erweima" src="{{erweimasrc}}" bindtap="pre"></image>
       <view class="imgLogo">
           <image class="long" src="https://miao.su/images/2019/02/16/longLeft732ff.md.png"></image>
           <image class="long toRight" src="https://miao.su/images/2019/02/16/longfad55.md.png"></image>

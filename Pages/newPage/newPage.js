@@ -112,8 +112,8 @@ Page({
         id: 8,
         url: '../image/guoxue.jpg',
         whoColumn: '卢老师专栏',
-        howPeople: 1335,
-        price: 685
+        howPeople: 233,
+        price: 3333
       },
     ],
     special:"综合-专业-深度-广度",

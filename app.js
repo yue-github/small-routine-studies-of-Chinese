@@ -29,6 +29,7 @@ App({
                     url: src,
                     method: "GET",
                     success: res => {
+                      
                       this.globalData.idObj = res.data;
                       wx.request({
                         url: "http://localhost/geomancy/public/api/user/getUserInfo",
@@ -57,7 +58,29 @@ App({
         }
       }
     })
-    // 登录
+    // 获取小程序码
+    var that=this;
+    wx.request({
+      url: 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' + this.globalData.appid+'&secret='+this.globalData.secret,
+      method:"GET",
+      success:data=>{
+        var access_token=data.data.access_token;
+        console.log(access_token)
+          wx.request({
+            url: "https://api.weixin.qq.com/cgi-bin/wxaapp/createwxaqrcode?access_token=" + access_token,
+            method:"POST",
+            data:{
+              access_token: access_token,
+              path:"Pages/newPage/newPage"
+            },
+            success:data=>{
+               
+              this.globalData.erweima = "data:image/jpeg;base64," + encodeURI(data.data);
+              
+            }
+          })
+      }
+    })
  
    
     

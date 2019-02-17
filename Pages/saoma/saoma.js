@@ -1,15 +1,17 @@
 // Pages/saoma/saoma.js
+var app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgalist: ["https://miao.su/images/2019/02/16/erweima1c86f.jpg"]
+    imgalist: ["https://miao.su/images/2019/02/16/erweimac1e88.jpg"],
+    erweimasrc:"../image/erweima.jpg"
   },
   pre(){
     wx.previewImage({
-      current: "https://miao.su/images/2019/02/16/erweima1c86f.jpg", // 当前显示图片的http链接   
+      current: "https://miao.su/images/2019/02/16/erweimac1e88.jpg", // 当前显示图片的http链接   
       urls: this.data.imgalist // 需要预览的图片http链接列表   
     }) 
   },
@@ -38,7 +40,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      this.setData({
+        erweimasrc: app.globalData.erweima
+      })
+       
   },
 
   /**
