@@ -1,11 +1,11 @@
-// Pages/other/other.js
+// Pages/radio/radio.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    src:''
   },
 
   /**
@@ -15,14 +15,16 @@ Page({
     wx.showLoading({
       title: "加载中"
     });
-     
+    this.setData({
+      src: options.src
+    })
+      
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
     wx.hideLoading();
   },
 

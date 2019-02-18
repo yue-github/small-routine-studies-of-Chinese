@@ -1,7 +1,11 @@
 {
   "pages":[
-    
     "Pages/newPage/newPage",
+    "Pages/moreCompanyData/moreCompanyData",
+    "Pages/concact/concact",
+    "Pages/radio/radio",
+    "Pages/companyIntroduce/companyIntroduce",
+    
     "Pages/saoma/saoma",
     "Pages/payPage/payPage",
     "Pages/class/class",

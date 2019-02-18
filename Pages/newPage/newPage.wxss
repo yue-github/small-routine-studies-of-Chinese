@@ -129,6 +129,7 @@
   background:#fff;
   margin-top:18rpx;
   font-size:20rpx;
+
 }
 .column-main{
   width:100%;
@@ -213,6 +214,7 @@
   width:100%;
   background:#F0F0F0;
   margin-top:18rpx;
+
 }
 .culture-title{
     width:100%;
@@ -240,6 +242,7 @@
   box-sizing:border-box;
   padding:8rpx 10px;
   background:#fff;
+
 }
 .detail-title{
   display:flex;
@@ -292,4 +295,28 @@
 .change-marginTop{
   margin:0;
   margin-bottom:13rpx;
+}
+.data-change{
+  margin-left:auto;
+}
+.company{
+  margin-top:10rpx;
+}
+.data-img{
+  width:100%;
+  height:250rpx;
+}
+.data-nav{
+  width:100%;
+  display:flex;
+  background:#fff;
+}
+.data-nav-child{
+  width:50%;
+  height:100rpx;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  font-size:23rpx;
+
 }

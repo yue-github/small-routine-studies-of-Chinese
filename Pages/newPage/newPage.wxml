@@ -1,7 +1,7 @@
 <view class="container">
     <view class="search">
           <view class="logo">
-                <image class="logo-size" src="../image/logo.jpg"></image>
+                <image class="logo-size" src="{{logo}}"></image>
           </view>
           <view class="search-font" catchtap='goSearch'>
               <text class="fa fa-search font-right"></text>
@@ -133,6 +133,19 @@
     </view>
     </block>
     <view class="company">
-          
+        <view class="culture-title">
+                <view class="mingshi">资料</view>
+                <text class="cultureSpecial">
+                      {{dataMsg}}
+                </text>
+                <view class="column-more culture-more data-change" catchtap="goMoreData">更多资料</view>
+        </view>
+        <view>
+            <image src="https://miao.su/images/2019/02/18/data43e91.jpg" class="data-img"></image>
+        </view>
+        <view class="data-nav">
+            <view class="data-nav-child" catchtap="goCompanyIntroduce">公司简介</view>
+            <view class="data-nav-child" catchtap="goConcact">联系我们</view>
+        </view>
     </view>
 </view>

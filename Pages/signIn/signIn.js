@@ -106,7 +106,15 @@ Page({
       content:'此功能暂未开放，请耐心等待！'
     })
   },
-  onShow(){
+  onLoad(){
+    wx.showLoading({
+      title: "加载中"
+    });
+     
+  },
+  onReady(){
+    
+    wx.hideLoading();
   }
   
 })

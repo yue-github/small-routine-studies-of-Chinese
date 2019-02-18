@@ -8,7 +8,7 @@ Page({
     // 课程列表数据
       classData:[
         {
-          src:'../image/guoxue.jpg',
+          src:'https://miao.su/images/2019/02/18/guoxue8a7df.md.jpg',
           className:'课程',
           price:'888.00',
           name:'未知',
@@ -66,14 +66,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.showLoading({
+      title: "加载中"
+    });
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+   
+    wx.hideLoading();
   },
 
   /**

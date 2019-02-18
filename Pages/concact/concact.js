@@ -1,19 +1,16 @@
-// Pages/saoma/saoma.js
-var app=getApp();
+// Pages/concact/concact.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgalist: [],
-    erweimasrc:""
-  },
-  pre(){
-    wx.previewImage({
-      current: this.data.erweimasrc, // 当前显示图片的http链接   
-      urls: this.data.imgalist // 需要预览的图片http链接列表   
-    }) 
+    concactData:{
+      phone:"18814137329",
+      qq:"1079051908@qq.com",
+      mail:"4435215@qq.com",
+      adress:"广东省广州市"
+    }
   },
   goTabBar() {
     wx.reLaunch({
@@ -23,6 +20,11 @@ Page({
   goHome() {
     wx.reLaunch({
       url: '../newPage/newPage',
+    })
+  },
+  gosaoma() {
+    wx.reLaunch({
+      url: '../saoma/saoma'
     })
   },
   makeMoney() {
@@ -43,13 +45,7 @@ Page({
     wx.showLoading({
       title: "加载中"
     });
-    var src = app.globalData.erweima ? app.globalData.erweima : "../image/erweima.jpg";
-    var listSrc = app.globalData.erweima ? app.globalData.erweima :"https://miao.su/images/2019/02/16/erweimac1e88.jpg";
-      this.setData({
-        erweimasrc: src,
-        imgalist: [listSrc]
-      })
-       
+     
   },
 
   /**

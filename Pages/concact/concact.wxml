@@ -1,0 +1,28 @@
+<import src="../template-navHead/template-navHead.wxml"/>
+<view class="container">
+      <view class="head">
+            <template is="t-navHead"/> 
+      </view>
+      <view class="concact">
+          <view class="concact-title">联系我们</view>
+          <view class="concact-detail">
+              <view class="concact-num">
+                <view class="big-padding">
+                    <view class="addWidth">
+                        <text class="fa fa-phone change-blue"></text><text class="margin-font">电话：{{concactData.phone}}</text>
+                    </view>
+                    <view class="addWidth">
+                        <text class="fa fa-qq change-blue"></text><text class="margin-font">QQ：{{concactData.qq}}</text>
+                    </view>
+                    <view class="addWidth">
+                        <text class="fa fa-envelope change-blue"></text><text class="margin-font">邮箱：{{concactData.mail}}</text>
+                    </view>
+                  </view>
+                     <view class="address">
+                          <text class="fa fa-map-marker font-big change-blue"></text><text class="change-margin">广东省广州市</text>
+                     </view>
+              </view>
+          </view>
+      </view>
+      
+</view>

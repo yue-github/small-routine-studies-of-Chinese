@@ -1,0 +1,28 @@
+<import src="../template-navHead/template-navHead.wxml"/>
+ <view class="container">
+      <view class="head">
+            <template is="t-navHead"/> 
+      </view>
+      <view class="container-main">
+          <view class="componayMsg">
+              <image src="{{logo}}" class="logo"></image>
+              <text class="cpmpony-name">{{companyName}}</text>
+          </view>
+          <block wx:for="{{introduceData}}" wx:key="key">
+          <view class="content-margin">
+          <view class="c-title">
+              {{item.title}}
+          </view>
+          <view class="content">
+              {{item.content}}
+          </view>
+          </view>
+          </block>
+          <view class="imgMsg">
+              <text class="img-title">荣誉凭证</text>
+              <image src="{{imgMsgData.img1}}" class="img1"></image>
+              <text class="img-title">创始人</text>
+              <image src="{{imgMsgData.img2}}" class="img2"></image>
+          </view>
+      </view>
+ </view>

@@ -1,6 +1,8 @@
 var loveContent = require('../data/data');
+ 
 Page({
   data: {
+    logo: getApp().globalData.logo,
     dots:true,
     autoplay: true,
     interval: 3000,
@@ -15,7 +17,7 @@ Page({
       },
       {
         id: 2,
-        url: 'https://miao.su/images/2019/02/18/06e7d0ea8c49de0fd1b18.md.png'
+        url: 'https://miao.su/images/2019/02/18/24438b3fd0a65e3265f50.md.png'
       },
       {
         id: 3,
@@ -142,7 +144,8 @@ Page({
         'star': 66,
         'comments': 608
       },
-    ]
+    ],
+    dataMsg:"浏览-信息"
   },
   goRegister(){
       wx.navigateTo({
@@ -153,6 +156,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: "加载中"
+    })
     this.setData({
       loveContent:loveContent.loveContent
       });
@@ -234,11 +240,36 @@ Page({
       mask: true,
     })
   },
+  goCompanyIntroduce(){
+    wx.showLoading({
+      title:"加载中"
+    });
+    
+      wx.navigateTo({
+        url: '../companyIntroduce/companyIntroduce',
+      })
+  },
+  goMoreData(){
+    wx.showLoading({
+      title: "加载中"
+    })
+    wx.navigateTo({
+      url: '../moreCompanyData/moreCompanyData',
+    })
+  },
+  goConcact(){
+    wx.showLoading({
+      title: "加载中"
+    })
+    wx.navigateTo({
+      url: '../concact/concact',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    wx.hideLoading();
   },
 
   /**

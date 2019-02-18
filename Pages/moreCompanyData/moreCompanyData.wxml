@@ -1,0 +1,19 @@
+<import src="../template-navHead/template-navHead.wxml"/>
+<view class="container">
+      <view class="head">
+            <template is="t-navHead"/> 
+      </view>
+      <view class="content-main">
+           <view class="componayMsg">
+              <image src="{{logo}}" class="logo"></image>
+              <text class="cpmpony-name">{{companyName}}</text>
+           </view>
+           <block wx:for="{{moreData}}" wx:key="key">
+           <view class="content">
+                <view class="content-title">{{item.title}}</view><text wx:if="{{item.srcShow}}" class="changeNavColor" catchtap="goLook">{{item.src}}</text>
+                <image class="content-img" src="{{item.img}}"></image>
+           </view>
+           </block>
+      </view>
+      
+</view>

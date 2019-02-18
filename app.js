@@ -6,7 +6,10 @@ App({
     appid: "wxcdcea82c094087d6",
     secret: "9850092e558a13e91cbe2cfce87eda31",
     idObj:{},
-    domain:'http://localhost/geomancy/public'
+    domain:'http://localhost/geomancy/public',
+    logo:'https://miao.su/images/2019/02/18/logof015a.png',
+    companyName:"明正道大学堂",
+    erweima:""
   },
   onLaunch: function () {
     // 展示本地存储能力
