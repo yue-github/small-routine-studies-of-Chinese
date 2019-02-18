@@ -3,29 +3,32 @@ Page({
   data: {
     dots:true,
     autoplay: true,
-    interval: 2000,
+    interval: 3000,
     indicatorColor:'#fa8a46',
     indicatorActiveColor:'#fff',
     circular:true,
     loveContent:[],
     bannerSrc:[
       {
-        url:'https://miao.su/images/2019/02/16/banner358a97.jpg'
+        id:1,
+        url:'https://miao.su/images/2019/02/18/5d0cbae109e12c571c3c6.md.jpg'
       },
       {
-        url: 'https://miao.su/images/2019/02/16/banner21589a.jpg'
+        id: 2,
+        url: 'https://miao.su/images/2019/02/18/06e7d0ea8c49de0fd1b18.md.png'
       },
       {
-        url: 'https://miao.su/images/2019/02/16/banner150739.jpg'
+        id: 3,
+        url: 'https://miao.su/images/2019/02/18/0da94566cf5aa37683112.md.jpg'
       },
       {
-        url: 'https://miao.su/images/2019/02/16/banner358a97.jpg'
+        url: 'https://miao.su/images/2019/02/18/955769216b6d0640d9d18.md.jpg'
       },
       {
-        url: 'https://miao.su/images/2019/02/16/banner21589a.jpg'
+        url: 'https://miao.su/images/2019/02/18/fac3370b80f054f574498.md.jpg'
       },
       {
-        url: 'https://miao.su/images/2019/02/16/banner150739.jpg'
+        url: 'https://miao.su/images/2019/02/18/71c042de038ca527f8737.md.jpg'
       }
     ],
     bagua:'../image/bagua.png',
@@ -61,56 +64,56 @@ Page({
     columnData:[
       {
         id: 1,
-        url:'../image/guoxue.jpg',
+        url:'https://miao.su/images/2019/02/18/guoxue8a7df.md.jpg',
         whoColumn:'董老师专栏',
         howPeople:1002,
         price:688
       },
       {
         id: 2,
-        url: '../image/guoxue.jpg',
+        url: 'https://miao.su/images/2019/02/18/xu2535b.md.jpg',
         whoColumn: '蒲老师专栏',
         howPeople: 25,
         price: 12080
       },
       {
         id: 3,
-        url: '../image/guoxue.jpg',
+        url: 'https://miao.su/images/2019/02/18/lu1e508.jpg',
         whoColumn: '徐老师专栏',
         howPeople: 1230,
         price: 688
       },
       {
         id: 4,
-        url: '../image/guoxue.jpg',
+        url: 'https://miao.su/images/2019/02/18/pucaee7.jpg',
         whoColumn: '魏老师专栏',
         howPeople: 13,
         price: 36608
       },
       {
         id: 5,
-        url: '../image/guoxue.jpg',
+        url: 'https://miao.su/images/2019/02/18/he739b3.md.jpg',
         whoColumn: '吴老师专栏',
         howPeople: 872,
         price: 6885
       },
       {
         id: 6,
-        url: '../image/guoxue.jpg',
+        url: 'https://miao.su/images/2019/02/18/zhanga11ca.jpg',
         whoColumn: '张老师专栏',
         howPeople: 1305,
         price: 686
       },
       {
         id: 7,
-        url: '../image/guoxue.jpg',
+        url: 'https://miao.su/images/2019/02/18/wu9f062.jpg',
         whoColumn: '何老师专栏',
         howPeople: 133,
         price: 6589
       },
       {
         id: 8,
-        url: '../image/guoxue.jpg',
+        url: 'https://miao.su/images/2019/02/18/weic9a18.jpg',
         whoColumn: '卢老师专栏',
         howPeople: 233,
         price: 3333
@@ -221,7 +224,6 @@ Page({
       title: "商品已售空",
       image: "../image/sad.png",
       duration: 2000,
-      mask: true,
     })
   },
   goMoreCulture(){

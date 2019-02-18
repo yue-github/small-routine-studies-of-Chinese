@@ -1,5 +1,8 @@
 <view class="container">
     <view class="search">
+          <view class="logo">
+                <image class="logo-size" src="../image/logo.jpg"></image>
+          </view>
           <view class="search-font" catchtap='goSearch'>
               <text class="fa fa-search font-right"></text>
               <text class="font-small">搜索内容</text>
@@ -129,4 +132,7 @@
           </view>
     </view>
     </block>
+    <view class="company">
+          
+    </view>
 </view>
