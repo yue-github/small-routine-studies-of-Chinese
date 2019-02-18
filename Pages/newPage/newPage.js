@@ -17,7 +17,7 @@ Page({
       },
       {
         id: 2,
-        url: 'https://miao.su/images/2019/02/18/24438b3fd0a65e3265f50.md.png'
+        url: 'https://miao.su/images/2019/02/18/gao8712d.md.png'
       },
       {
         id: 3,

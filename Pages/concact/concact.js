@@ -6,10 +6,10 @@ Page({
    */
   data: {
     concactData:{
-      phone:"18814137329",
-      qq:"1079051908@qq.com",
-      mail:"4435215@qq.com",
-      adress:"广东省广州市"
+      phone:"13926463131",
+      qq:"275972481",
+      mail:"275972481@qq.com",
+      adress:"广州市黄埔区双岗黄岗大街富鸿里6号"
     }
   },
   goTabBar() {
