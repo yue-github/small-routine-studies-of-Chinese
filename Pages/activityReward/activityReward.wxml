@@ -3,7 +3,7 @@
   <view class="head">
     <template is="t-navHead" />
   </view>
-  <view class="active">
+  <view class="active" style="margin-top:53rpx">
     <view class="active-title">{{activeData.title}}</view>
     <view class="active-bott">
       <image src="../image/active.jpg" class="active-img"></image>

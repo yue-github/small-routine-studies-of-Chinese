@@ -50,22 +50,22 @@
     </view>
 
 
-    <!-- 专栏 -->
+    <!-- 课程 -->
     <view class="column">
           <view class="column-title">
-                <text class="zhuanlan">专栏</text>
+                <text class="zhuanlan">课程</text>
                 <text class="special">
                       {{special}}
                 </text>
-                <view class="column-more" catchtap="goMoreColumn">更多专栏</view>
+                <view class="column-more" catchtap="goMoreColumn" data-newid='1'>更多课程</view>
           </view>
           <view class="column-main">
           <block wx:for="{{columnData}}" wx:key="key">
           
-            <view class="column-content" data-id="{{item.id}}" catchtap="goColumnDetail">
+            <view class="column-content" data-item="{{item}}" data-number="{{item.number}}" catchtap="goClassDetail">
                   <view class="column-img">
                       <image src="{{item.url}}" class="img-detail"></image>
-                      <view class="column-status">已抢购完...</view>
+                      <view class="column-status" wx:if="{{item.number==0?true:false}}">已抢购完...</view>
                   </view>
                   <view class="whoColumn">{{item.whoColumn}}</view>
                   <view class="class-msg">
@@ -103,16 +103,16 @@
                 {{item.contentDetail}}
             </view>
             <view class="comment">
-                <text class="fa fa-star changeFont"></text>
+               <text class="fa fa-star changeFont"  catchtap="dianzhan"></text>
                 <text class="changeSmall">{{item.star}}</text>
-                <text class="fa fa-comments changeFont"></text>
+                <text class="fa fa-comments changeFont" catchtap="comment"></text>
                 <text class="changeSmall">{{item.comments}}</text>
             </view>
       </view>
       </block>
     </view>
 
-    <block wx:for="{{loveContent}}" wx:key="key">
+    <!-- <block wx:for="{{loveContent}}" wx:key="key">
     <view class="content-detail">
           <view class="detail-title">
                 <image src="{{item.userLogo}}" class="user-logo"></image>
@@ -131,7 +131,7 @@
               <text class="changeSmall">{{item.comments}}</text>
           </view>
     </view>
-    </block>
+    </block> -->
     <view class="company">
         <view class="culture-title">
                 <view class="mingshi">资料</view>
@@ -149,3 +149,4 @@
         </view>
     </view>
 </view>
+ 

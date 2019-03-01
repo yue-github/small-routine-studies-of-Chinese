@@ -1,0 +1,281 @@
+@import "../template-navHead/template-navHead.wxss";
+.c-img{
+  width:100%;
+  height:350rpx;
+  position: relative;
+  overflow: hidden;
+}
+.content{
+  width:100%;
+  box-sizing:border-box;
+  padding:0 18rpx;
+  margin-top:10rpx;
+  font-size:33rpx;
+  position:relative;
+}
+.title{
+  font-weight:bold;
+  white-space: wrap;
+  word-break: break-all;
+  font-size: 36rpx;
+}
+.name{
+    font-size:25rpx;
+    color:#999999;
+    margin-top:18rpx;
+    display:flex;
+    align-items: center;
+}
+.name-left{
+  width:300rpx;
+  white-space: wrap;
+  
+}
+.name-right{
+  margin-left:auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  font-size:20rpx;
+   
+}
+.name-right-number{
+  color:#f40;
+}
+.price{
+  margin-top:20rpx;
+  color:#f40;
+  font-size:25rpx;
+}
+.price-detail{
+  font-size:55rpx;
+}
+.c-foot{
+  margin-top:25rpx;
+  font-size:20rpx;
+  color:#999999;
+}
+.line{
+  margin-left:30rpx;
+  margin-right:30rpx;
+   
+}
+.change-color{
+  color:#55b7f5;
+}
+.integral{
+  display:flex;
+  width:100%;
+  align-items: center;
+  box-sizing:border-box;
+  padding:18rpx;
+  font-size:20rpx;
+  color:#999999;
+  border-top:1px solid #F0F0F0;
+  margin-top:28rpx;
+  
+}
+.changeBig{
+  font-size:30rpx;
+  margin-right:10rpx;
+}
+.user{
+  margin-left:auto;
+  width:100rpx;
+  height:50rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:100px;
+  font-size:30rpx;
+  color:#fff;
+  background:#55b7f5;
+}
+.d-money{
+  color:#f40;
+}
+.line-gray{
+  width:100%;
+  height:10rpx;
+  background:#F0F0F0;
+}
+.changeBlue{
+  color:#55b7f5;
+  font-size:30rpx;
+}
+.displayFlex{
+  display:flex;
+  align-items: center;
+}
+.introduce-title{
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size:35rpx;
+}
+.introduce{
+  width:100%;
+  box-sizing:border-box;
+  padding:18rpx;
+}
+.introduce-line{
+  width:500rpx;
+  height:1px;
+  background:#55b7f5;
+  margin:0 auto;
+  margin-top:18rpx;
+}
+.introduce-content{
+  color:#333333;
+  font-size:30rpx;
+  margin-top:18rpx;
+  text-indent: 60rpx;
+}
+.fixed-bottom{
+  width:100%;
+  z-index:10;
+  height:80rpx;
+  position:fixed;
+  box-sizing:border-box;
+ 
+  bottom:0;
+ 
+}
+.bg{
+  width:100%;
+  height:100%;
+  background:#55b7f5;
+  opacity:0.8;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.fixed-content{
+  width:100%;
+  height:100%;
+  box-sizing:border-box;
+  padding:18rpx;
+  position:relative;
+  z-index:10;
+  display:flex;
+  align-items: center;
+}
+.deduction{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:500rpx;
+  font-size:25rpx;
+  color:#fff;
+}
+.paynow{
+  width:150rpx;
+  height:60rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:auto;
+  font-size:35rpx;
+  background:#ff0000;
+  color:#fff;
+  border-radius:10rpx;
+   
+
+}
+.pop{
+  width:100%;
+  height:100vh;
+  z-index:100;
+  position:absolute;
+  top:0;
+  left:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop-bg{
+  width:100%;
+  height:100%;
+  background:#000;
+  opacity:0.8;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.pop-content{
+  width:500rpx;
+  height:500rpx;
+  background:#fff;
+  z-index: 10;
+  border-radius:10rpx;
+  box-sizing:border-box;
+  padding:18rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  font-size:28rpx;
+}
+.pop-content-title{
+  width:100%;
+  
+  text-align: center;
+}
+.pop-integral{
+  font-size:43rpx;
+  color:#55b7f5;
+}
+.pop-input{
+  margin:0 auto;
+  border-bottom:1px solid #55b7f5;
+  margin-top:50rpx;
+  color:#55b7f5;
+}
+.okorcancel{
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.okorcancel{
+  margin-top:80rpx;
+}
+.botton{
+  width:100rpx;
+  height:50rpx;
+    border:1px solid #ccc;
+    border-radius:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.cancel{
+  margin-right:50rpx;
+}
+.ok{
+  border:1px solid #55b7f5;
+}
+.listen-logo{
+  margin-left:28rpx;
+  font-size:60rpx;
+  color:#000;
+}
+.blue-font{
+  color:#000;
+}
+.v-logo{
+  width:200rpx;
+  height:200rpx;
+  position: absolute;
+  right:0;
+  top:150rpx;
+   
+  opacity:0.8;
+  
+}
+ 
+ .change-green{
+   color:#55b7f5
+ }
+ 

@@ -26,10 +26,13 @@ Page({
     })
   },
   makeMoney() {
-    wx.showModal({
-      title: '推广赚钱',
-      content: '此功能暂未开放，请耐心等待！'
+    wx.navigateTo({
+      url: '../pushMakeMoney/pushMakeMoney',
     })
+    // wx.showModal({
+    //   title: '推广赚钱',
+    //   content: '此功能暂未开放，请耐心等待！'
+    // })
   },
   goMyIntegral() {
     wx.reLaunch({

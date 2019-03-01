@@ -3,7 +3,7 @@
       <view class="head">
             <template is="t-navHead"/> 
       </view>
-      <view class="payTitle">
+      <view class="payTitle" style="margin-top:60rpx">
             <icon type="success" size="28" color="rgb(2,8,F,F,2,8)" class="pay-success"/>支付页面
       </view>
       <view class="nav-pay">

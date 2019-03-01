@@ -1,20 +1,45 @@
 // Pages/msg/msg.js
+var domain=getApp().globalData.domain;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+      msg:[
+        {
+          message:'明正道欢迎你',
+          create_time:'2019-25-54 4:25:65'
+        }
+      ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+     
     wx.showLoading({
       title: "加载中"
     });
+
+    wx.request({
+      url: domain+'/api/msg/getMsg',
+      method:"POST",
+      data:{
+        openid:getApp().globalData.idObj.openid
+      },
+      success:res=>{
+// console.log(res)
+        this.setData({
+          msg:res.data
+        })
+        wx.hideLoading();
+      },
+      fail(){
+        wx.hideLoading();
+      }
+    })
      
   },
 
@@ -23,7 +48,7 @@ Page({
    */
   onReady: function () {
     
-    wx.hideLoading();
+    
   },
 
   /**

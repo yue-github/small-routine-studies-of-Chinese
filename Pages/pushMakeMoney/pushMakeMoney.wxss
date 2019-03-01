@@ -1,0 +1,51 @@
+@import "../template-navHead/template-navHead.wxss";
+.title{
+  font-size:25rpx;
+  color:#999999;
+  margin-top:18rpx;
+  box-sizing:border-box;
+  padding:15rpx;
+}
+.img-main{
+  width:700rpx;
+  height:700rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin:0 auto;
+  margin-top:200rpx;
+}
+.erweima{
+    width:500rpx;
+    height:500rpx;
+    position:relative;
+    
+}
+.long{
+  width:100rpx;
+  height:100rpx;
+}
+.imgLogo{
+  width:100%;
+  display:flex;
+}
+.toRight{
+  margin-left:auto;
+}
+.font-er{
+  position:absolute;
+  top:233rpx;
+  left:120rpx;
+  color:#ccc;
+   
+}
+.detail{
+font-size:25rpx;
+text-align:center;
+margin-top:38rpx;
+color:#999999;
+}
+.changeM{
+  margin-left:5rpx;
+}

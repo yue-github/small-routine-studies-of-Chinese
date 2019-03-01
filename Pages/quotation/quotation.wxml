@@ -1,0 +1,53 @@
+<import src="../template-navHead/template-navHead.wxml" />
+<import src="../template-search/template-search.wxml" />
+<view class="cpntainer">
+  <view class="head">
+    <template is="t-navHead" />
+  </view>
+  <view class="search" style="margin-top:60rpx">
+      <template is="template-search" />
+  </view>
+  
+  <view class="quotation-main">
+    <block wx:for="{{talkData}}" wx:key="key">
+      <view class="content-detail change-marginTop">
+        <view class="detail-title">
+          <image src="{{item.userLogo}}" class="user-logo"></image>
+          <text class="user-name">{{item.userName}}</text>
+          <text>{{item.date}}</text>
+        </view>
+        <view class="content-title">{{item.title}}</view>
+        <image src="{{item.titleImage}}" class="user-img"></image>
+        <view class="love-detail">
+          {{item.contentDetail}}
+        </view>
+        <view class="comment">
+          <text class="fa fa-star changeFont"  catchtap="dianzhan"></text>
+          <text class="changeSmall">{{item.star}}</text>
+          <text class="fa fa-comments changeFont" catchtap="comment"></text>
+          <text class="changeSmall">{{item.comments}}</text>
+        </view>
+      </view>
+    </block>
+    <block wx:for="{{loveContent}}" wx:key="key">
+    <view class="content-detail special-change" >
+          <view class="detail-title">
+                <image src="{{item.userLogo}}" class="user-logo"></image>
+                <text class="user-name">{{item.userName}}</text>
+                <text>{{item.date}}</text>
+          </view>
+          <view class="content-title">{{item.title}}</view>
+          <image src="{{item.titleImage}}" class="user-img"></image>
+          <view class="love-detail">
+               {{item.contentDetail}}
+          </view>
+          <view class="comment">
+              <text class="fa fa-star changeFont" catchtap="dianzhan"></text>
+              <text class="changeSmall">{{item.star}}</text>
+              <text class="fa fa-comments changeFont" catchtap="comment"></text>
+              <text class="changeSmall">{{item.comments}}</text>
+          </view>
+    </view>
+    </block>
+  </view>
+</view>

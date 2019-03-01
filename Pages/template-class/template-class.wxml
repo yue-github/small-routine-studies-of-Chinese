@@ -1,0 +1,31 @@
+<template name="template-class">
+<view class="class-container" wx:if="{{show_boo}}">
+  <block wx:for="{{classData}}" wx:key="key">
+      <view class="class-detail" catchtap="goPay" data-try="{{item.class_try_read}}" data-item="{{item}}" data-boo="{{item.boo}}">
+          <image src="{{item.url}}" class="detail-img"></image>
+          <view class="class-right">
+              <view class="class-top">
+                  <view class="className">{{item.title}}</view>
+                  <view class="pay" catchtap='goPay' data-try="{{item.class_try_read}}" data-item="{{item}}" data-boo="{{item.boo}}">购买</view>
+              </view>
+              <view class="class-center">
+                   <text class="price">￥<text class="price-detail">{{item.price}}</text></text>
+                   <text wx:if="{{item.boo}}" class="introdece">{{item.line_is}}</text>
+              </view>
+              <view class="class-foot">
+                 <view class="float-left">
+                      <text class="fa fa-user-circle-o"></text>
+                      <text class="class-foot-margin">{{item.whoColumn}}</text>
+                 </view>
+                 
+                 <view class="float-right">
+                      <text class="fa fa-eye"></text>
+                      <text class="class-foot-margin">{{item.howPeople}}</text>
+                 </view>
+                 
+              </view>
+          </view>
+      </view>
+  </block>
+  </view>
+</template>

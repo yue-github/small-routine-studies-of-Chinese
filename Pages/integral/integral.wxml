@@ -2,7 +2,7 @@
 <view class="head">
       <template is="t-navHead"/> 
 </view>
-<view class="inte-main">
+<view class="inte-main" style="margin-top:53rpx">
     <image class="inte-background" src="../image/rotate.png"></image>
     <view class="inte">当前积分点为：<text class="change-color1">{{integral.points}}</text></view>
     <view class="grow">当前每8小时可领积分：<text class="change-color2">{{integral.addPoint}}</text></view>

@@ -7,6 +7,11 @@
   align-items: center;
   padding:5rpx;
   overflow: hidden;
+  z-index:1000;
+  position:fixed;
+  top:0;
+  left:0;
+   
 }
 .changeFont{
   width:50rpx;
@@ -27,4 +32,8 @@
     display:flex;
     align-items:center;
     justify-content: center;
+}
+.home-logo{
+  width:45rpx;
+  height:45rpx;
 }

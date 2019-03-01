@@ -1,0 +1,20 @@
+<import src="../template-navHead/template-navHead.wxml"/>
+<view class="container">
+    <view class="head">
+            <template is="t-navHead"/> 
+      </view>
+     
+  <view class="img-main">
+      <view class="imgLogo">
+          <image class="long" src="https://miao.su/images/2019/02/16/longLeft732ff.md.png"></image>
+          <image class="long toRight" src="https://miao.su/images/2019/02/16/longfad55.md.png"></image>
+      </view>
+       
+      <image class="erweima" src="{{erweimasrc}}" bindtap="pre"><view class="font-er" wx:if="{{font_boo}}">点击获取推广码</view></image>
+      <view class="imgLogo">
+          <image class="long" src="https://miao.su/images/2019/02/16/longLeft732ff.md.png"></image>
+          <image class="long toRight" src="https://miao.su/images/2019/02/16/longfad55.md.png"></image>
+      </view>
+  </view>
+  <view class="detail" catchtap='showDetail'>详情<text class="fa fa-search-plus changeM"></text></view>
+</view>

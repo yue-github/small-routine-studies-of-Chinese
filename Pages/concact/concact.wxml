@@ -3,7 +3,7 @@
       <view class="head">
             <template is="t-navHead"/> 
       </view>
-      <view class="concact">
+      <view class="concact" style="margin-top:53rpx">
           <view class="concact-title">联系我们</view>
           <view class="concact-detail">
               <view class="concact-num">
@@ -19,7 +19,7 @@
                     </view>
                   </view>
                      <view class="address">
-                          <text class="fa fa-map-marker font-big change-blue"></text><text class="change-margin">广东省广州市</text>
+                          <text class="fa fa-map-marker font-big change-blue"></text><text class="change-margin">{{concactData.address}}</text>
                      </view>
               </view>
           </view>

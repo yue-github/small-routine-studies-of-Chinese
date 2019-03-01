@@ -1,35 +1,48 @@
 {
   "pages":[
+    "Pages/index/index",
+    "Pages/myTuiGuang/myTuiGuang",
+    "Pages/msg/msg",
+    
+    "Pages/mySet/mySet",
+    
+    
+    "Pages/my/my",
+    
+    "Pages/pushMakeMoney/pushMakeMoney",
+    "Pages/listenClass/listenClass",
+   
+    
+   
+    
+    
+    "Pages/quotation/quotation",
+    "Pages/shop/shop",
+    
+    "Pages/class-detail/class-detail",
+    "Pages/class/class",
+    
+    "Pages/payMethod/payMethod",
+    
+    
     "Pages/newPage/newPage",
     "Pages/moreCompanyData/moreCompanyData",
     "Pages/concact/concact",
     "Pages/radio/radio",
     "Pages/companyIntroduce/companyIntroduce",
-    
     "Pages/saoma/saoma",
     "Pages/payPage/payPage",
-    "Pages/class/class",
-    "Pages/index/index",
     "Pages/activityReward/activityReward",
-    
     "Pages/integral/integral",
     "Pages/signIn/signIn",
     
-    "Pages/shop/shop",
     
-    "Pages/msg/msg",
-    "Pages/my/my",
+    
     "Pages/other/other"
     
-   
-    
-    
-    
-    
-    
-    
-    
-    
+  ],
+  "requiredBackgroundModes": [
+    "audio"
   ],
   "window":{
     "backgroundTextStyle": "light",

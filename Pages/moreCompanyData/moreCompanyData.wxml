@@ -3,7 +3,7 @@
       <view class="head">
             <template is="t-navHead"/> 
       </view>
-      <view class="content-main">
+      <view class="content-main" style="margin-top:53rpx">
            <view class="componayMsg">
               <image src="{{logo}}" class="logo"></image>
               <text class="cpmpony-name">{{companyName}}</text>

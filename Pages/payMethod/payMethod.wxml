@@ -1,0 +1,43 @@
+<import src="../template-navHead/template-navHead.wxml"/>
+<view class="container">
+     <view class="head">
+            <template is="t-navHead"/> 
+      </view>
+      <view class="content-main" style="margin-top:53rpx">
+            <view class="content-class">
+                  <image class="class-img" src="{{classMsg.url}}"></image>
+                  <view class="class-detail">
+                      <view class="title">{{classMsg.title}}</view>
+                      <view class="price">￥{{classMsg.price}}</view>
+                      <view class="class-detail-bott">
+                          <text class="fa fa-user changeMargin"></text>
+                          <text>课程所属：{{classMsg.whoColumn}}</text>
+                      </view>
+                  </view>
+                  <view class='class-choose'>
+                      <icon type="success" size="20" />
+                  </view>
+            </view>
+      </view>
+      <view class="pay-choose">
+            <view class="pay-list">支付平台</view>
+            <view class="pay-list">
+                <view class="weixin">
+                    <text class="fa fa-weixin"></text>
+                </view>
+               <text class="weixinpay">微信支付</text>
+                <icon type="success" size="16" class="success-icon"/>
+            </view>
+            <view class="pay-list">
+            <view class="weixin card">
+                    <text class="fa fa-credit-card"></text>
+                </view>
+                
+               <text class="zhanghupay">微信支付</text>
+               <text class="fa fa-circle-o success-icon changeGray"></text>
+            </view>
+            <view class="willpay" catchtap="payLoad">
+                确认支付￥{{payok}}
+            </view>
+      </view>   
+</view>

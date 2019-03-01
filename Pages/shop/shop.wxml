@@ -1,13 +1,88 @@
 <!--Pages/shop/shop.wxml-->
+<import src="../template-search/template-search" />
+
+
+
 <view class="container">
-      <view class="head">
-          欢迎来到购物商城
-      </view>
-      <view class="line"></view>
-      <view class="center">
-          <image src="../image/sorry.png" class="center-img"></image>
-          <text class="center-space">
+  <view class="head">
+    欢迎来到购物商城
+  </view>
+  <view class="line"></view>
+
+  <view>
+    <template is="template-search" />
+  </view>
+  <view class="warn-null" wx:if="{{warnNullBoo}}">
+    <image src="../image/sorry.png" class="warn-null-img"></image>
+    <text class="warn-null-space">
                 商品已售空，请耐心等待商品上架...
-          </text>   
+          </text>
+  </view>
+  <view class="split"></view>
+  <view class="banner">
+    <swiper class="banner-swiper" indicator-dots="{{dots}}" autoplay="{{autoplay}}" interval="{{interval}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}">
+
+      <block wx:for="{{bannerSrc}}" wx:key='key' wx:for-item='item'>
+        <swiper-item>
+          <image src="{{item.url}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="split"></view>
+  <view class="center">
+    <view class='nav'>
+      <block wx:for="{{navData}}" wx:key="key">
+        <view class="nav-child" catchtap="changeModuleShow" data-index="{{item.index}}" data-list="{{item.font_content}}">
+          <view class="quan">
+            <text class='{{item.font}}'></text>
+          </view>
+          <text class="nav-font">{{item.font_content}}</text>
+        </view>
+      </block>
+    </view>
+    <!-- 导航模块内容 -->
+    <view class="content-detail">
+
+      <view class="class-container" wx:if="{{module_obj.m_fir}}">
+        <block wx:for="{{classData}}" wx:key="key">
+          <view class="class-detail" catchtap="goPay" data-try="{{item.class_try_read}}" data-item="{{item}}" data-boo="{{item.boo}}">
+            <image src="{{item.url}}" class="detail-img"></image>
+            <view class="class-right">
+              <view class="class-top">
+                <view class="className">{{item.title}}</view>
+                <view class="pay" catchtap='goPay' data-try="{{item.class_try_read}}" data-item="{{item}}" data-boo="{{item.boo}}">购买</view>
+              </view>
+              <view class="class-center">
+                <text class="price">￥<text class="price-detail">{{item.price}}</text></text>
+                <text wx:if="{{item.boo}}" class="introdece">{{item.line_is}}</text>
+              </view>
+              <view class="class-foot">
+                <view class="float-left">
+                  <text class="fa fa-user-circle-o"></text>
+                  <text class="class-foot-margin">{{item.whoColumn}}</text>
+                </view>
+
+                <view class="float-right">
+                  <text class="fa fa-eye"></text>
+                  <text class="class-foot-margin">{{item.howPeople}}</text>
+                </view>
+
+              </view>
+            </view>
+          </view>
+        </block>
       </view>
+      <!-- 模块2 -->
+      <view class="other-container" wx:if="{{!module_obj.m_fir}}">
+        <view class="warn-null change-margin" wx:if="{{!module_obj.m_fir}}">
+          <image src="../image/sorry.png" class="warn-null-img img-change"></image>
+          <text class="warn-null-space">
+                {{the_list}}暂无上架商品...
+          </text>
+        </view>
+      </view>
+    </view>
+    <!-- 导航模块内容 -->
+  </view>
 </view>

@@ -9,7 +9,7 @@ Page({
       phone:"13926463131",
       qq:"275972481",
       mail:"275972481@qq.com",
-      adress:"广州市黄埔区双岗黄岗大街富鸿里6号"
+      address:"广州市黄埔区双岗黄岗大街富鸿里6号"
     }
   },
   goTabBar() {
@@ -28,10 +28,13 @@ Page({
     })
   },
   makeMoney() {
-    wx.showModal({
-      title: '推广赚钱',
-      content: '此功能暂未开放，请耐心等待！'
+    wx.navigateTo({
+      url: '../pushMakeMoney/pushMakeMoney',
     })
+    // wx.showModal({
+    //   title: '推广赚钱',
+    //   content: '此功能暂未开放，请耐心等待！'
+    // })
   },
   goMyIntegral() {
     wx.reLaunch({

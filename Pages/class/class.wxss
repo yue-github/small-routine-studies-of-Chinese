@@ -1,5 +1,7 @@
 @import "../template-navHead/template-navHead.wxss";
 .search{
+  width:100%;
+  box-sizing:border-box;
   padding:18rpx;
   display:flex;
   align-items: center;
@@ -66,10 +68,11 @@
 .class-detail{
   display:flex;
   align-items: center;
+  margin-bottom: 15rpx;
 }
 .detail-img{
   width:466rpx;
-  height:180rpx;
+  height:160rpx;
   margin-right:10rpx;
 }
 .class-right{
@@ -80,8 +83,25 @@
 .price{
   color:#f40;
 }
+.class-center{
+  width:400rpx;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
 .price-detail{
   font-size:40rpx;
+}
+.class-top{
+   width:100%;
+   display: flex;
+}
+.className{
+  width:200rpx;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+
 }
 .class-foot{
   color:#999999;
@@ -103,10 +123,16 @@
   margin-left:8rpx;
 }
 .pay{
-  float:right;
+  width:120rpx;
+  height:50rpx;
+  display:flex;
+  margin-left:auto;
+  align-items: center;
+  justify-content: center;
   background:#55b7f5;
-  padding:0 30rpx;
+  box-sizing:border-box;
   color:#fff;
   font-size:28rpx;
   border-radius:50px;
+  margin-top:8rpx;
 }

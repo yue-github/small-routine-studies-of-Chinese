@@ -1,10 +1,10 @@
-
+@import "../template-class/template-class";
 .container{
   font-size:30rpx;
 }
 .head{
   width:100%;
-  height:100rpx;
+  height:80rpx;
   display:flex;
   justify-content: center;
   flex-direction: column;
@@ -29,9 +29,171 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top:100rpx;
+  margin-top:18rpx;
 }
 .center-space{
   color:#ccc;
   font-size:25rpx;
 }
+.container{
+  width:100%;
+  background:#F0F0F0;
+}
+.content-main{
+  width:100%;
+  height:53vh;
+  position:relative;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.blue-top{
+  width:100%;
+  height:333rpx;
+  background:#55b7f5;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.white-bott{
+  width:733rpx;
+  height:500rpx;
+  background:#fff;
+  z-index:2;
+  margin-top:10rpx;
+  border-radius:10px;
+  overflow:hidden;
+  position: relative;
+}
+.sign-main{
+  width:150rpx;
+  height:80rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position:absolute;
+  left:0;
+  right:0;
+}
+.sign-line{
+  width:75rpx;
+  height:25rpx;
+  border-left:3px solid #55b7f5;
+  border-right:3px solid #55b7f5;
+}
+.sign-bott{
+    width:130rpx;
+    height:55rpx;
+    background:#55b7f5;
+    border-radius:3px;
+    display:flex;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
+  font-size:25rpx;
+}
+.user-top{
+  width:100%;
+  height:350rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.user-main{
+    display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position:relative;
+}
+.user-logo{
+  width:180rpx;
+  height:180rpx;
+  position:relative;
+  border-radius:100%;
+}
+.change-position{
+  position:absolute;
+  right:-10rpx;
+  top:-10rpx;
+  color:#55b7f5;
+  font-size:45rpx;
+  z-index:10;
+}
+.username{
+  margin-top:20rpx;
+  font-size:30rpx;
+  display:flex;
+  align-items: center;
+
+}
+.change-margin{
+  margin-left:20rpx;
+}
+.huiyuan-main{
+  margin-top:10rpx;
+  color:#55b7f5;
+  font-size:25rpx;
+}
+.huiyuan{
+  margin-right:18rpx;
+
+}
+.user-bott{
+  width:100%;
+  height:200rpx;
+  display:flex;
+justify-content: space-evenly;
+}
+.change-flex{
+  display:flex;
+  align-items: center;
+  
+  flex-direction: column;
+  font-size:45rpx;
+  margin-top:15rpx;
+}
+.user-bott-child{
+  font-size:25rpx;
+  margin-top:10rpx;
+}
+.change-f-color1{
+    color:pink;
+}
+.change-f-color2{
+    color:#55b7f5;
+}
+.my-class{
+ width:733rpx;
+margin:0 auto;
+border-radius:10rpx;
+background:#fff;
+overflow:hidden;
+}
+.my-class-title{
+  width:100%;
+  height:50rpx;
+  box-sizing:border-box;
+  padding-left:15rpx;
+  display:flex;
+  align-items: center;
+  font-size:28rpx;
+  border-bottom:1px solid #F0F0F0;
+}
+.pay_is{
+  width:80rpx;
+  padding:1px 5rpx;
+  border:1px solid #28FF28;
+  margin-left:10rpx;
+  font-size:18rpx;
+  color:#28FF28;
+  border-radius:20px;
+}
+.change-f-color3{
+  color:#000;
+}
+ 
+ 

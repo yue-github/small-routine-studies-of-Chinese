@@ -1,0 +1,66 @@
+<import src="../template-navHead/template-navHead.wxml" />
+<view class="container">
+  <view class="head">
+    <template is="t-navHead" />
+  </view>
+  <image src="{{classMsg.url}}" class="c-img" style="margin-top:53rpx"></image>
+  <view class="content-main">
+    <view class="content">
+      <view class="title">{{classMsg.title}}</view>
+      <view class="name">
+            <view class="name-left">{{classMsg.whoColumn}}</view>
+            <view class="name-right">剩余可抢购: <text class="name-right-number">{{classMsg.number}}份</text></view>
+      </view>
+      <view class="price">￥
+        <text class="price-detail">{{classMsg.price}}</text>
+      </view>
+      <view class="c-foot">
+        <text class="tui_found">推广金：{{classMsg.tui_found}}</text>
+        <text class="line">|</text>
+        <text>{{classMsg.howPeople}}人购买</text>
+        <text class="line">|</text>
+        <text class="change-color">{{classMsg.other}}</text>
+      </view>
+
+    </view>
+    <view class="integral">
+      <view class="displayFlex">
+      <text class="fa fa-database changeBig"></text>
+      <view>每<text class="changeBlue">{{classMsg.howIntegral}}</text>积分可抵
+      <text class="d-money">￥{{classMsg.integral}}</text></view>
+      </view>
+      <view class="user" catchtap="userIntegral">使用</view>
+    </view>
+  </view>
+  <view class="line-gray"></view>
+  <view class="introduce">
+    <view class="introduce-title">课程介绍</view>
+    <view class="introduce-line"></view>
+    <view class="introduce-content">
+      {{classMsg.introduce}}
+    </view>
+  </view>
+</view>
+<view class="fixed-bottom">
+  <view class="bg"></view>
+  <view class="fixed-content">
+    <view class="deduction">你使用了{{userIntegral}}积分可抵扣
+      <text class="d-money">￥{{(userIntegral/classMsg.howIntegral)*classMsg.integral}}</text>
+    </view>
+    <view class="paynow" catchtap="goPay">立即支付</view>
+  </view>
+</view>
+<view class="pop" wx:if="{{popBoo}}">
+  <view class="pop-bg"></view>
+  <view class="pop-content">
+    <view class="pop-content-title">你当前拥有积分点：
+      <text class="pop-integral">{{classMsg.inCount}}</text>
+    </view>
+    <input type="text" class="pop-input" focus="true" placeholder='请输入要使用多少积分点' maxlength='18' bindinput="bindinput"></input>
+    <view class="okorcancel">
+      <view class="botton cancel" catchtap="cancel">取消</view>
+      <view class="botton ok"  catchtap="ok">确定</view>
+    </view>
+  </view>
+
+</view>

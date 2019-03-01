@@ -1,6 +1,6 @@
 <template name="t-navHead">
       <view class="head"> 
-            <text class="fa fa-angle-left changeFont" catchtap="goTabBar"></text>
+            <image class="home-logo" src="https://miao.su/images/2019/02/18/logof015a.png" catchtap="goTabBar"></image>
             <view class="head-right">
                   <view class="head-nav-font" catchtap="goMyIntegral">我的积分</view>
                   <text class="suLine">|</text>

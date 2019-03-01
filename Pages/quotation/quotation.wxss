@@ -1,0 +1,69 @@
+@import "../template-navHead/template-navHead.wxss";
+@import "../template-search/template-search.wxss";
+.content-detail{
+  box-sizing:border-box;
+  padding:8rpx 10px;
+  background:#fff;
+
+}
+.detail-title{
+  display:flex;
+  align-items:center;
+  font-size:25rpx;
+  color:#ccc;
+}
+.user-logo{
+  width:50rpx;
+  height:50rpx;
+  border-radius:100%;
+}
+.user-name{
+  margin:0 5px;
+
+}
+.content-title{
+  margin:10px 0;
+}
+.user-img{
+  width:100%;
+  height:320rpx;
+}
+.love-detail{
+  width:100%;
+  display:flex;
+  margin-top:5px;
+  text-indent: 65rpx;
+  text-align: left;
+  font-size:29rpx;
+  letter-spacing: 3rpx;
+  color: #6b6666;
+  background:#fff;
+}
+.changeFont{
+  font-size:30rpx;
+  color:#28FF28;
+}
+.changeSmall{
+  font-size:26rpx;
+  margin-right:50rpx;
+  margin-left:8rpx;
+}
+.comment{
+  margin:5px 0;
+}
+.content-detail{
+  margin-top:10px;
+}
+.change-marginTop{
+  margin:0;
+  margin-bottom:13rpx;
+}
+.data-change{
+  margin-left:auto;
+}
+.quotation-main{
+  background:#F0F0F0;
+}
+.special-change{
+  margin-top:10rpx;
+}

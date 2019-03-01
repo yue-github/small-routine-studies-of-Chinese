@@ -1,0 +1,50 @@
+<import src="../template-navHead/template-navHead.wxml" />
+<view class="container">
+  <view class="head">
+    <template is="t-navHead" />
+  </view>
+  <view class="content">
+    <image src="{{earth}}" class='content-image'></image>
+    <view class="found-main">
+      我的推广金：
+      <view class="font-found">{{found}}</view>
+    </view>
+  </view>
+  <view class="duihuan"><text class="duihuan-font" catchtap="pop">兑换</text></view>
+  <view class="msg">
+    <view class="title">
+      <text class="fa fa-bell-o changeColor"></text>推广消息
+      <text class="t-detail" catchtap="showDetail">规则详情</text>
+      </view>
+    <view class="center" wx:if="{{msg.length==0?true:false}}">
+      <image src="../image/sorry.png" class="center-img"></image>
+      <text class="center-space">
+                暂无消息...
+          </text>
+    </view>
+  </view>
+</view>
+<block wx:for="{{msg}}" wx:key="key">
+<view class="msg-show">
+<view>
+<text class="fa fa-coffee msg-font"></text>
+      恭喜你！{{item.name}}购买了{{item.title}}课程,你获得了推广金
+      <text class="change-yellow">{{item.get_found}}</text>
+</view>
+  <view class="c-time">{{item.create_time}}</view>   
+</view>
+</block>
+<view class="pop" wx:if="{{popBoo}}">
+  <view class="pop-bg"></view>
+  <view class="pop-content">
+    <view class="pop-content-title">你当前拥有推广金：
+      <text class="pop-integral">{{found}}</text>
+    </view>
+    <input type="text" class="pop-input" focus="true" placeholder='请输入要兑换多少推广金' maxlength='18' bindinput="bindinput"></input>
+    <view class="okorcancel">
+      <view class="botton cancel" catchtap="cancel">取消</view>
+      <view class="botton ok"  catchtap="ok">确定</view>
+    </view>
+  </view>
+
+</view>

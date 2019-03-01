@@ -238,6 +238,7 @@
 .culture-more{
   margin-left: 275rpx;
 }
+/* 语录 */
 .content-detail{
   box-sizing:border-box;
   padding:8rpx 10px;
@@ -320,3 +321,4 @@
   font-size:23rpx;
 
 }
+ 

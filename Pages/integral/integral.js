@@ -24,10 +24,13 @@ Page({
     })
   },
   makeMoney() {
-    wx.showModal({
-      title: '推广赚钱',
-      content: '此功能暂未开放，请耐心等待！'
+    wx.navigateTo({
+      url: '../pushMakeMoney/pushMakeMoney',
     })
+    // wx.showModal({
+    //   title: '推广赚钱',
+    //   content: '此功能暂未开放，请耐心等待！'
+    // })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -37,8 +40,8 @@ Page({
       title: "加载中"
     });
     
-    if(options.options==1){
-      
+    if(options.options=="yes"){
+      wx.hideToast();
       wx.showToast({
         title: "签到成功",
         icon: "success",

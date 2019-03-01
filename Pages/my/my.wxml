@@ -1,14 +1,98 @@
 <!--Pages/shop/shop.wxml-->
 <view class="container">
-      <view class="head">
-          欢迎来到我的中心模块
-      </view>
-      <view class="line"></view>
-      <view class="center">
-          <image src="../image/sorry.png" class="center-img"></image>
-          <text class="center-space">
+  <view class="head">
+    欢迎来到我的中心模块
+  </view>
+  <view class="line"></view>
+  <view class="center" wx:if="{{false}}">
+    <image src="../image/sorry.png" class="center-img"></image>
+    <text class="center-space">
                 我的中心暂时不能设置，请耐心等待...
-          </text>   
-      </view>
-</view>
+          </text>
+  </view>
+  <view class="content-main">
+    <view class="blue-top">
 
+    </view>
+    <view class="white-bott">
+      <view class="sign-main">
+        <view class="sign-line"></view>
+        <view class="sign-bott" catchtap="goSign">去签到</view>
+      </view>
+      <view class="user-top">
+        <view class="user-main">
+
+          <image src="{{userMsg.avatarUrl}}" class="user-logo">
+            <text class="fa fa-pencil change-position"></text>
+          </image>
+          <view class="username">
+            {{userMsg.nickName}}
+            <text class="fa fa-fort-awesome change-margin"></text>
+          </view>
+          <view class="huiyuan-main">
+            <text class="huiyuan">{{userMsg.huiyuan_is}}</text>id:{{userMsg.openid}}
+          </view>
+        </view>
+      </view>
+      <view class="user-bott">
+        <view class="change-flex" catchtap="gopIntegral">
+          <text class="fa fa-hourglass-half change-f-color1"></text>
+          <text class="user-bott-child">我的积分</text>
+        </view>
+        <view class="change-flex" catchtap="goTuiguang">
+
+          <text class="fa fa-street-view change-f-color2"></text>
+          <text class="user-bott-child">我的推广</text>
+        </view>
+         <view class="change-flex" catchtap="goSet">
+
+          <text class="fa fa-cog change-f-color2 change-f-color3"></text>
+          <text class="user-bott-child">设置</text>
+        </view>
+      </view>
+    </view>
+    <view>
+
+    </view>
+  </view>
+  <view class="my-class">
+    <view class="my-class-title">我的课程</view>
+    <view class="center" wx:if="{{classData.length==0?true:false}}">
+      <image src="../image/sorry.png" class="center-img"></image>
+      <text class="center-space">
+               暂时没有你的购买课程信息
+          </text>
+    </view>
+      <!-- 课程模块 -->
+  <view class="class-container" wx:if="{{show_boo}}">
+  <block wx:for="{{classData}}" wx:key="key">
+      <view class="class-detail" catchtap="goPay" data-pay="{{item.pay_is}}" data-try="{{item.class_try_read}}" data-item="{{item}}" data-boo="{{item.boo}}" data-id="{{item.class_id}}">
+          <image src="{{item.url}}" class="detail-img"></image>
+          <view class="class-right">
+              <view class="class-top">
+                  <view class="className">{{item.title}}</view>
+                  <view class="pay" catchtap='goPay' data-try="{{item.class_try_read}}" data-item="{{item}}" data-boo="{{item.boo}}" wx:if="{{!item.pay_is}}">购买</view>
+              </view>
+              <view class="class-center">
+                   <text class="price">￥<text class="price-detail">{{item.price}}</text></text>
+                   <text wx:if="{{item.boo}}" class="introdece">{{item.line_is}}</text>
+                   <text class="pay_is" wx:if="{{item.pay_is}}">已购</text>
+              </view>
+              <view class="class-foot">
+                 <view class="float-left">
+                      <text class="fa fa-user-circle-o"></text>
+                      <text class="class-foot-margin">{{item.whoColumn}}</text>
+                 </view>
+                 
+                 <view class="float-right">
+                      <text class="fa fa-eye"></text>
+                      <text class="class-foot-margin">{{item.eye}}</text>
+                 </view>
+                 
+              </view>
+          </view>
+      </view>
+  </block>
+  </view>
+  </view>
+</view>

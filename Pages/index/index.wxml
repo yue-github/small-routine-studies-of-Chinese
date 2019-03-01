@@ -1,18 +1,18 @@
 <import src="template-index/template-index.wxml"/>
 
-<view class="index-container">
-      <view>
-          <image src="https://miao.su/images/2019/02/16/loves0aa20.png" class="logo"></image>
-          <image src="https://miao.su/images/2019/02/16/loves0aa20.png" class="logo"></image>
-          <image src="https://miao.su/images/2019/02/16/loves0aa20.png" class="logo"></image>
+ 
+<view class="confirm">
+      <view class="bg"></view>
+      <view class="content">
+            <view class="confirm-title">
+                  <image src="{{logo}}" class="c-t-img"></image>
+                  <view>明正道欢迎你</view>
+            </view>
+            <view class="confirm-warn">
+                *温馨提示：需要获取您头像、微信名等相关信息才能体验小程序
+            </view>
+            <view cloass="confirm-yes">
+                <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="yes-button">进入小程序</button>
+            </view>
       </view>
-      
-      <view class="title">
-          <text>曾经你我</text>
-      </view>
-      <template is="nihaoshijie"/>
-      <view class="share-btn" catchtap="goNewPage">
-          <text>分享快乐时光</text>
-      </view>
-      <image src="../image/qing.jpg" class="qing"></image>
 </view>

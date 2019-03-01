@@ -4,7 +4,7 @@
       <template is="t-navHead"/> 
   </view>
 
-  <view>
+  <view style="margin-top:53rpx">
     <view class="data-title">{{year}}年{{month}}月{{day}}日</view>
     <view class="sign-main">
           <view class="sign-main-title">每8小时签到加<text class="changeColor">积分</text></view>

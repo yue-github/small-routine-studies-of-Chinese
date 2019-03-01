@@ -1,0 +1,38 @@
+<import src="../template-navHead/template-navHead.wxml"/>
+<view class="container">
+     <view class="head">
+            <template is="t-navHead"/> 
+      </view>
+      <view class="content">
+            <view class="title">
+                <view class="title-detail">
+                    联系方式编辑
+                </view>
+            </view>
+            <view class="content-detail">
+                  <view class="detail-child">
+                        <input type="text" placeholder='请输入你的真实姓名' maxlength="50" bindinput="input_fir" value="{{name}}"></input><text class="fa fa-user-circle-o floatRight"></text>
+                  </view>
+                   <view class="detail-child">
+                        <input type="number" placeholder='请输入你的联系方式' maxlength="11" bindinput="input_sec" value="{{phone}}"></input><text class="fa fa-phone floatRight"></text>
+                  </view>
+
+                   <view class="detail-child">
+                        <input type="number" placeholder='请输入你的可汇款银行账号' maxlength="100" bindinput="input_four" value="{{bank}}"></input><text class="fa fa-bank floatRight"></text>
+                  </view>
+
+                    <view class="detail-child">
+                        <input type="text" placeholder='请输入你的联系地址' maxlength="50" bindinput="input_thir" value="{{adrress}}"></input><text class="fa fa-map-pin floatRight"></text>
+                  </view>
+                  <view class="detail-child" style="font-size:30rpx">
+                        请点击下方上传收款二维码图片
+                  </view>
+                  <view class="add-img" catchtap="addimg">添加图片</view>
+                  <view class="er-img" wx:if="{{erweimaSrc?true:false}}">
+                        <image mode="aspectFit" src="{{erweimaSrc}}" class="chooseImg"></image>
+                  </view>
+                  <view class="submit" catchtap="submit">确定</view>
+                  <view style="font-size:23rpx;color:#f40;margin-top:18rpx;margin-left:18rpx" wx:if="{{msg_boo}}">*温馨提示：信息不完整</view>
+            </view>
+      </view>
+</view>

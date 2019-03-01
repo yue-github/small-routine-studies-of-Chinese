@@ -1,14 +1,24 @@
 <!--Pages/shop/shop.wxml-->
 <view class="container">
-      <view class="head">
-          欢迎来到消息中心
+  <view class="head">
+    欢迎来到消息中心
+  </view>
+  <view class="line"></view>
+  <view class="center" wx:if="{{msg.length==0?true:false}}">
+    <image src="../image/sorry.png" class="center-img"></image>
+    <text class="center-space">
+                暂无消息...
+          </text>
+  </view>
+  <view class="msg-content">
+    <block wx:for="{{msg}}" wx:key="key">
+      <view class="msg-detail">
+        <view>
+          <text class="fa fa-bell changeColor" wx:if="{{item.system_is==0?false:true}}"></text>
+          <text class="content-msg">{{item.message}}</text>
+        </view>
+        <view class="c-time">{{item.create_time}}</view>
       </view>
-      <view class="line"></view>
-      <view class="center">
-          <image src="../image/sorry.png" class="center-img"></image>
-          <text class="center-space">
-                消息中心暂时不对外开放，请耐心等待...
-          </text>   
-      </view>
+    </block>
+  </view>
 </view>
-

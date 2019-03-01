@@ -46,10 +46,13 @@ Page({
     })
   },
   makeMoney() {
-    wx.showModal({
-      title: '推广赚钱',
-      content: '此功能暂未开放，请耐心等待！'
+    wx.navigateTo({
+      url: '../pushMakeMoney/pushMakeMoney',
     })
+    // wx.showModal({
+    //   title: '推广赚钱',
+    //   content: '此功能暂未开放，请耐心等待！'
+    // })
   },
   goMyIntegral() {
     wx.reLaunch({
@@ -60,6 +63,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+     
     wx.showLoading({
       title: "加载中"
     });
@@ -70,9 +74,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.showLoading({
-      title: "加载中"
-    });
+    
     wx.hideLoading();
   },
 

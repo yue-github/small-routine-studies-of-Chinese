@@ -1,0 +1,118 @@
+@import "../template-navHead/template-navHead.wxss";
+.container{
+  width: 100%;
+  height: 100vh;
+  background:#F0F0F0;
+}
+.content-main{
+  width:100%;
+}
+.class-img{
+  width:340rpx;
+  height:170rpx;
+}
+.content-class{
+  width:100%;
+  box-sizing:border-box;
+  padding:18rpx;
+  background:#fff;
+  display:flex;
+}
+ 
+.class-detail{
+  width:333rpx;
+  display:flex;
+  box-sizing:border-box;
+  padding-left:10rpx;
+  justify-content: space-between;
+  flex-direction:column;
+  font-size:30rpx;
+}
+.class-choose{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:auto;
+}
+.price{
+  color:#f40;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.class-detail-bott{
+  font-size:20rpx;
+  color:#999999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.changeMargin{
+  margin-right:10rpx;
+}
+.title{
+  width:100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pay-choose{
+  margin-top:10rpx;
+}
+.pay-list{
+  width:100%;
+  height:100rpx;
+  box-sizing:border-box;
+  padding:18rpx;
+  display:flex;
+  align-items: center;
+  background:#fff;
+  border-bottom:1px solid #F0F0F0;
+  font-size:40rpx;
+}
+.weixin{
+  width:50rpx;
+  height:50rpx;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  border-radius:100%;
+  background:#28FF28;
+  color:#fff;
+  font-size:35rpx;
+  margin-right:18rpx;
+}
+.card{
+  background:#ccc;
+  font-size:30rpx;
+}
+.weixinpay,
+.zhanghupay{
+  font-size:26rpx;
+}
+.zhanghupay{
+  color:#ccc;
+}
+.success-icon{
+  margin-left:auto;
+}
+.changeGray{
+   color:#ccc;
+   font-size:38rpx;
+}
+.willpay{
+  width:90%;
+  height:100rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+  font-size:38rpx;
+  background:#55b7f5;
+  margin:0 auto;
+  margin-top:28rpx;
+  border-radius:20px;
+
+
+}
+ 
