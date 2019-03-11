@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    request_boo:true,
     classMsg: {
+
       // id: 1,
       // url: 'https://miao.su/images/2019/02/18/xu2535b.md.jpg',
       // title: "风水国学",
@@ -54,55 +56,172 @@ Page({
       url: '../integral/integral'
     })
   },
-  payLoad(){
+ RandomString(length) {
+   let str = '';
+    for( ; str.length < length; str += Math.random().toString(36).substr(2) );
+        return str.substr(0, length);
+ },
+  // payLoad(){
+     
+  //   if (!this.data.request_boo){
+  //     return false;
+  //   }
+  //   this.setData({
+  //     request_boo:false
+  //   });
+  //   let globalData=getApp().globalData;
+  //   // 吊起数据签名
+  //   wx.request({
+  //     url: globalData.domain +'/api/pay/wxpay',
+  //     method:'post',
+  //     data:{
+  //       openid:globalData.idObj.openid,
+  //       uname: globalData.userInfo.nickName,
+  //       title:this.data.classMsg.title,
+  //       price: this.data.classMsg.price
+  //     },
+  //     header:{
+  //       'content-type':'application/x-www-form-urlencoded'
+  //     },
+  //     success:res=>{
+  //       let params=res.data.params;
+  //       wx.requestPayment({
+  //         timeStamp: params.timeStamp,
+  //         nonceStr: params.nonceStr,
+  //         package: params.package,
+  //         signType: params.signType,
+  //         paySign: params.paySign ,
+  //         success:res=>{
+  //           console.log(res);
+  //           wx.showToast({
+  //             title: "支付成功",
+  //             icon: "success",
+  //             duration: 1500,
+  //             mask: true
+  //           })
+  //         }
+  //       })
+  //     }
+  //   })
+    
+   
+
+
+  //   // 支付接口请求完成后完成底下接口操作
+  //   return false;
+  //   wx.showLoading({
+  //     title: "加载中",
+  //     mask:true
+  //   });
+  //   var glo = getApp().globalData;
+  //   var json = this.data.classMsg;
+  //   json.openid = glo.idObj.openid,
+  //   json.pay_is=1;
+  //   json.useHowIntegral = this.data.useHowIntegral;
+    
+  //   // delete json.id;
+
+  //    wx.request({
+  //      url: glo.domain+'/api/pay/upload',
+  //      method:"POST",
+  //      data: json,
+  //      success:(res)=>{
+  //         if(res.data.status==200){
+  //           wx.showToast({
+  //             title: "恭喜获得课程",
+  //             icon: "success",
+  //             image: '../image/sign.png',
+  //             duration: 1500,
+  //             mask: true
+  //           })
+  //           this.setData({
+  //             request_boo: true
+  //           });
+  //           setTimeout(() => {
+  //             var json=JSON.stringify(res.data.class_data);
+  //             wx.reLaunch({
+  //               url: "../msg/msg"
+  //             })
+  //           }, 1300);
+  //           wx.hideLoading();
+  //         }else{
+  //           wx.showToast({
+  //             title:'请联系客服',
+  //             icon: "fail",
+  //             image: '../image/sad.png',
+  //             duration: 1300,
+  //             mask: true
+  //           })
+  //           wx.hideLoading();
+  //         }
+          
+  //      },
+  //      fail(){
+  //        wx.hideLoading();
+  //      }
+  //    }) 
+  // },
+  // 两个版本
+  payLoad() {
+    if (!this.data.request_boo) {
+      return false;
+    }
+    this.setData({
+      request_boo: false
+    });
+    
+  
     wx.showLoading({
       title: "加载中",
-      mask:true
+      mask: true
     });
     var glo = getApp().globalData;
     var json = this.data.classMsg;
     json.openid = glo.idObj.openid,
-    json.pay_is=1;
+      json.pay_is = 1;
     json.useHowIntegral = this.data.useHowIntegral;
-    
+
     // delete json.id;
 
-     wx.request({
-       url: glo.domain+'/api/pay/upload',
-       method:"POST",
-       data: json,
-       success:(res)=>{
-          if(res.data.status==200){
-            wx.showToast({
-              title: "恭喜获得课程",
-              icon: "success",
-              image: '../image/sign.png',
-              duration: 1500,
-              mask: true
+    wx.request({
+      url: glo.domain + '/api/pay/upload',
+      method: "POST",
+      data: json,
+      success: (res) => {
+        if (res.data.status == 200) {
+          wx.showToast({
+            title: "恭喜获得课程",
+            icon: "success",
+            image: '../image/sign.png',
+            duration: 1500,
+            mask: true
+          })
+          this.setData({
+            request_boo: true
+          });
+          setTimeout(() => {
+            var json = JSON.stringify(res.data.class_data);
+            wx.reLaunch({
+              url: "../msg/msg"
             })
-            setTimeout(() => {
-              var json=JSON.stringify(res.data.class_data);
-              wx.reLaunch({
-                url: "../msg/msg"
-              })
-            }, 1300);
-            wx.hideLoading();
-          }else{
-            wx.showToast({
-              title:'请联系客服',
-              icon: "fail",
-              image: '../image/sad.png',
-              duration: 1300,
-              mask: true
-            })
-            wx.hideLoading();
-          }
-          
-       },
-       fail(){
-         wx.hideLoading();
-       }
-     }) 
+          }, 1300);
+          wx.hideLoading();
+        } else {
+          wx.showToast({
+            title: '请联系客服',
+            icon: "fail",
+            image: '../image/sad.png',
+            duration: 1300,
+            mask: true
+          })
+          wx.hideLoading();
+        }
+
+      },
+      fail() {
+        wx.hideLoading();
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -120,9 +239,21 @@ Page({
       this.setData({
         useHowIntegral: parseInt(options.use)
       });
-      this.setData({
-        payok: (parseFloat(this.data.classMsg.price) - ((parseInt(options.use) / this.data.classMsg.howIntegral) * this.data.classMsg.integral)).toFixed(2)
-      })
+      let payok = (parseFloat(this.data.classMsg.price) - ((parseInt(options.use) / this.data.classMsg.howIntegral) * this.data.classMsg.integral)).toFixed(2);
+      if (payok<0){
+        const int = Math.ceil(parseFloat(this.data.classMsg.price) / this.data.classMsg.integral *(this.data.classMsg.howIntegral));
+        console.log(int)
+        this.setData({
+          useHowIntegral: int,
+          payok:0
+        });
+        
+      }else{
+        this.setData({
+          payok: payok
+         })
+      }
+      
     }
      
   },

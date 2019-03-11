@@ -249,6 +249,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const scene = decodeURIComponent(options.scene);
+    this.setData({
+      scene:scene
+    })
     wx.request({
       url: domain +'/api/banner/list',
       method:'GET',
@@ -266,11 +270,11 @@ Page({
       });
       // 测试
     // wx.request({
-    //   url: domain +"/api/user/register",
+    //   url: domain +"/api/test",
     //   method:"POST",
     //   data:{
-    //     name:'admin',
-    //     password:'123456'
+    //     name:'gdmzd',
+    //     password:'li123456'
     //   },
     //   success(data){
     //       console.log(data)
@@ -325,10 +329,14 @@ Page({
      
   },
   goSearch(){
-    wx.showModal({
-      title: "关于搜索内容通知",
-      content: "搜索内容暂不对外开放，请耐心等待"
-    });
+    wx.navigateTo({
+      url: '../homeSearch/homeSearch'
+    })
+    // return;
+    // wx.showModal({
+    //   title: "关于搜索内容通知",
+    //   content: "搜索内容暂不对外开放，请耐心等待"
+    // });
   },
   goMoreColumn(){
     wx.navigateTo({
@@ -400,10 +408,14 @@ Page({
     wx.request({
       url: domain + '/api/class/getClassLimit',
       method: 'POST',
+      data:{
+        scene: this.data.scene ? this.data.scene:0,
+        openid:getApp().globalData.idObj.openid
+      },
       success: res => {
-        if(res.data){
+        if(res.data.status==200){
           this.setData({
-            columnData: res.data
+            columnData: res.data.data
           });
         }
        
@@ -424,7 +436,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+     
   },
 
   /**

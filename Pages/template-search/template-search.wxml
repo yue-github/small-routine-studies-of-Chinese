@@ -2,8 +2,8 @@
   <view class="search">
     <view class="search-main">
       <icon type="search" size="18" class="search-icon" color="rgb(c,c,c)" />
-      <input maxlenth="255" placeholder='请输入关键内容' class="search-input"></input>
+      <input maxlenth="255" placeholder='请输入关键内容' class="search-input" bindinput="changeData"></input>
     </view>
-    <view class="search-font">搜索</view>
+    <view class="search-font" catchtap="search">搜索</view>
   </view>
 </template>

@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    inputData:'',
     // 课程列表数据
       classData:[
         // {
@@ -106,6 +107,50 @@ Page({
      
      
     
+  },
+  changeData(e) {
+
+    if (e.detail.value.replace(/\s*/g, '').length == 0) {
+      wx.request({
+        url: domain + '/api/class/getClass',
+        method: 'POST',
+        success: res => {
+          this.setData({
+            classData: res.data
+          });
+        }
+      })
+    }
+    this.setData({
+      inputData: e.detail.value
+    });
+
+  },
+  search() {
+    if (!this.data.inputData.replace(/\s*/g, '')) {
+      return false;
+    }
+    wx.showLoading({
+      title: "拼命搜索中..."
+    });
+    wx.request({
+      url: domain + '/api/msg/shopSearch',
+      method: 'post',
+      data: {
+        msg: this.data.inputData
+      },
+      success: res => {
+
+        this.setData({
+          classData: res.data
+        })
+        wx.hideLoading();
+      },
+      fail: () => {
+        wx.hideLoading();
+      }
+
+    })
   },
   /**
    * 生命周期函数--监听页面加载

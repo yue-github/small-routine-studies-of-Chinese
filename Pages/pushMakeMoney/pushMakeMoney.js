@@ -26,16 +26,71 @@ Page({
         },
         success:res=>{
           
-          wx.hideLoading();
+          
           var src = res.data[0].tuiguangma_src;
           if (src){
             this.setData({
-              erweimasrc: src,
-              imgalist: [src],
+              erweimasrc: globalData.domain+'/'+src,
+              imgalist: [globalData.domain + '/' +src],
               font_boo: false
             });
+            wx.hideLoading();
           }else{
+            // 获取小程序码
+            
+            var that = this;
+            wx.request({
+              url: 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' +  globalData.appid + '&secret=' + globalData.secret,
+              method: "GET",
+              success: data => {
+                var access_token = data.data.access_token;
+                var scene = ((new Date()).getTime() + 'a' + (Math.random() * 100000)).substr(0, 31);
+                var json = {
+                  
+                  scene: scene ,
+                  page: "Pages/newPage/newPage"
+                };
+                wx.request({
+                  url: "https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token="+access_token,
+                  method: "POST",
+                  data: JSON.stringify(json),
+                  encoding:'binary',
+                  // responseType: 'stream',
+                  success: data => {
+                    // console.log(data)
+                    return false;
+                    // 将获取到二进制流发到后台处理
+                    wx.request({
+                      url:  globalData.domain + '/api/change2Code',
+                      method: "POST",
+                      data: {
+                        openid: globalData.idObj.openid,
+                        code: data.data,
+                        scene:scene
+                      },
+                      success: res => {
+                          if(res.status==200){
+                             
+                              this.setData({
+                                erweimasrc: globalData.domain + '/' +res.data.url,
+                                imgalist: [globalData.domain + '/' +res.data.url],
+                                font_boo: false
+                              });
+                           
+                          }
+                        wx.hideLoading();
+                      },
+                      fail:res=>{
+                        wx.hideLoading();
+                      }
+                    })
+                    // this.globalData.erweima = "data:image/jpeg;base64," + encodeURI(data.data);
 
+                  }
+                })
+              }
+            })
+//获取小程序码
           }
         },
         fail(){

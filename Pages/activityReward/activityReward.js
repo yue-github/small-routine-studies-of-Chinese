@@ -6,11 +6,11 @@ Page({
    */
   data: {
       activeData:{
-        title:"活动抢奖品",
-        content:"本次活动将现场发放奖品",
-        condition:'通过进入小程序签到,积分点至少达到8',
-        time:'2019-2-21',
-        place:"广东省广州市"
+        title:"加载中...",
+        content:"加载中...",
+        condition:'加载中...',
+        time:'加载中...',
+        place:"加载中..."
       }
       
   },
@@ -55,6 +55,21 @@ Page({
     wx.showLoading({
       title: "加载中"
     });
+    const globalData=getApp().globalData;
+    wx.request({
+      url: globalData.domain+'/api/activity/getMsg',
+      method:'post',
+      success:res=>{
+        wx.hideLoading();
+        this.setData({
+          activeData:res.data[0]
+        })
+      },
+      fail:res=>{
+        wx.hideLoading();
+      }
+    })
+   
      
     
   },

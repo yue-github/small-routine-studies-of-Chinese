@@ -70,7 +70,10 @@
           <image src="{{item.url}}" class="detail-img"></image>
           <view class="class-right">
               <view class="class-top">
-                  <view class="className">{{item.title}}</view>
+                  <view class="className addClassDetail">
+                    <view class="class-title">{{item.title}}</view>
+                    <view class="delete-logo" data-id="{{item.id}}" catchtap="deleteClass"><text class="fa fa-minus-square-o"></text></view>
+                  </view>
                   <view class="pay" catchtap='goPay' data-try="{{item.class_try_read}}" data-item="{{item}}" data-boo="{{item.boo}}" wx:if="{{!item.pay_is}}">购买</view>
               </view>
               <view class="class-center">

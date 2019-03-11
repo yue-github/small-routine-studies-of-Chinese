@@ -21,7 +21,7 @@
           <view class="imgMsg">
               <text class="img-title">荣誉凭证</text>
               <image src="{{imgMsgData.img1}}" class="img1"></image>
-              <text class="img-title">创始人</text>
+              <text class="img-title" style="margin-top:10rpx">创始人</text>
               <image src="{{imgMsgData.img2}}" class="img2"></image>
           </view>
       </view>

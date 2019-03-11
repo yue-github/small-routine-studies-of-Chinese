@@ -48,7 +48,6 @@ goPay(res){
       id: res.currentTarget.dataset.id
     },
     success: res => {
-      console.log(res);
     }
   })
   if (res.currentTarget.dataset.pay==1){
@@ -88,6 +87,63 @@ goPay(res){
   goSet(){
     wx.navigateTo({
       url: '../mySet/mySet',
+    })
+  },
+  deleteClass(e){
+ 
+    wx.showModal({
+      title: '删除课程',
+      content: '你确定删除此课程么？',
+      success :res=>{
+        if (res.confirm == true) {
+          wx.showLoading({
+            title: "删除中...",
+            mask:true
+          });
+           wx.request({
+             url: domain +'/api/class/deleteClass',
+             method:'post',
+             data:{
+               openid:getApp().globalData.idObj.openid,
+               id:e.currentTarget.dataset.id
+             },
+             success:res=>{
+
+               if(res.data.status==200){
+                 wx.showToast({
+                   title: "删除成功",
+                   icon: "success",
+                   image: '../image/sign.png',
+                   duration: 1000,
+                   mask: true
+                 })
+               
+                 this.setData({
+                   classData:res.data.data
+                 })
+
+               }else{
+                 wx.showToast({
+                   title: "删除失败",
+                   image: "../image/sad.png",
+                   duration: 1000,
+                   mask: true,
+                 })
+               }
+               wx.hideLoading();
+             },
+             fail:res=>{
+               wx.showToast({
+                 title: "删除失败",
+                 image: "../image/sad.png",
+                 duration: 1000,
+                 mask: true,
+               })
+               wx.hideLoading();
+             }
+           })
+        }
+      }
     })
   },
   /**

@@ -11,18 +11,18 @@
             </view>
             <view class="content-detail">
                   <view class="detail-child">
-                        <input type="text" placeholder='请输入你的真实姓名' maxlength="50" bindinput="input_fir" value="{{name}}"></input><text class="fa fa-user-circle-o floatRight"></text>
+                        <input type="text" placeholder='请输入你的真实姓名' maxlength="50" bindinput="input_fir" value="{{name}}"></input><view class="floatRight"><text class="fa fa-user-circle-o"></text></view>
                   </view>
                    <view class="detail-child">
-                        <input type="number" placeholder='请输入你的联系方式' maxlength="11" bindinput="input_sec" value="{{phone}}"></input><text class="fa fa-phone floatRight"></text>
+                        <input type="number" placeholder='请输入你的联系方式' maxlength="11" bindinput="input_sec" value="{{phone}}"></input><view class="floatRight"><text class="fa fa-phone"></text></view>
                   </view>
 
                    <view class="detail-child">
-                        <input type="number" placeholder='请输入你的可汇款银行账号' maxlength="100" bindinput="input_four" value="{{bank}}"></input><text class="fa fa-bank floatRight"></text>
+                        <input type="number" placeholder='请输入你的可汇款银行账号' maxlength="100" bindinput="input_four" value="{{bank}}"></input><view class="floatRight"><text class="fa fa-bank"></text></view>
                   </view>
 
                     <view class="detail-child">
-                        <input type="text" placeholder='请输入你的联系地址' maxlength="50" bindinput="input_thir" value="{{adrress}}"></input><text class="fa fa-map-pin floatRight"></text>
+                        <input type="text" placeholder='请输入你的联系地址' maxlength="50" bindinput="input_thir" value="{{adrress}}"></input><view class="floatRight"><text class="fa fa-map-pin"></text></view>
                   </view>
                   <view class="detail-child" style="font-size:30rpx">
                         请点击下方上传收款二维码图片

@@ -93,7 +93,8 @@ Page({
           name: this.data.name,
           phone: this.data.phone,
           adrress: this.data.adrress,
-          erweimaSrc: this.data.erweimaSrc
+          erweimaSrc: this.data.erweimaSrc,
+          bank:this.data.bank
         },
         success: res => {
           wx.hideLoading();
@@ -154,6 +155,7 @@ Page({
     
   },
   input_four(e){
+   
     this.setData({
       bank: e.detail.value
     });

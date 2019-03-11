@@ -1,54 +1,43 @@
 {
   "pages":[
     "Pages/index/index",
+    "Pages/homeSearch/homeSearch",
+    "Pages/companyIntroduce/companyIntroduce",
+    "Pages/shop/shop",
+    "Pages/mySet/mySet",
     "Pages/myTuiGuang/myTuiGuang",
     "Pages/msg/msg",
-    
-    "Pages/mySet/mySet",
-    
-    
     "Pages/my/my",
-    
     "Pages/pushMakeMoney/pushMakeMoney",
     "Pages/listenClass/listenClass",
-   
-    
-   
-    
-    
     "Pages/quotation/quotation",
-    "Pages/shop/shop",
-    
     "Pages/class-detail/class-detail",
     "Pages/class/class",
-    
     "Pages/payMethod/payMethod",
-    
-    
     "Pages/newPage/newPage",
     "Pages/moreCompanyData/moreCompanyData",
     "Pages/concact/concact",
     "Pages/radio/radio",
-    "Pages/companyIntroduce/companyIntroduce",
+    
     "Pages/saoma/saoma",
     "Pages/payPage/payPage",
     "Pages/activityReward/activityReward",
     "Pages/integral/integral",
     "Pages/signIn/signIn",
-    
-    
-    
     "Pages/other/other"
-    
   ],
   "requiredBackgroundModes": [
     "audio"
   ],
   "window":{
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#28FF28",
     "navigationBarTitleText": "世界你好",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+   
+    "enablePullDownRefresh":true
+    
+    
   },
   "tabBar": {
     "borderStyle": "white",

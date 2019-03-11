@@ -86,8 +86,7 @@ Page({
           promotion_fund: this.data.theData
         },
         success:res=>{
-          console.log(res)
-          if(res.data.status==200){
+           if(res.data.status==200){
               this.setData({
                 found:res.data.found
               })

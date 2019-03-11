@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    inputData:'',
     // 导航数据
     navData:[
       {
@@ -67,53 +68,53 @@ Page({
     circular: true,
     loveContent: [],
     bannerSrc: [
-      {
-        id: 1,
-        url: 'https://miao.su/images/2019/02/18/guoxue8a7df.md.jpg'
-      },
-      {
-        id: 2,
-        url: 'https://miao.su/images/2019/02/18/xu2535b.md.jpg'
-      },
-      {
-        id: 3,
-        url: 'https://miao.su/images/2019/02/18/lu1e508.jpg'
-      },
-      {
-        id: 4,
-        url: 'https://miao.su/images/2019/02/18/pucaee7.jpg'
-      },
-      {
-        id: 5,
-        url: 'https://miao.su/images/2019/02/18/wu9f062.jpg'
-      },
-      {
-        id: 6,
-        url: 'https://miao.su/images/2019/02/18/he739b3.md.jpg'
-      }
+      // {
+      //   id: 1,
+      //   url: 'https://miao.su/images/2019/02/18/guoxue8a7df.md.jpg'
+      // },
+      // {
+      //   id: 2,
+      //   url: 'https://miao.su/images/2019/02/18/xu2535b.md.jpg'
+      // },
+      // {
+      //   id: 3,
+      //   url: 'https://miao.su/images/2019/02/18/lu1e508.jpg'
+      // },
+      // {
+      //   id: 4,
+      //   url: 'https://miao.su/images/2019/02/18/pucaee7.jpg'
+      // },
+      // {
+      //   id: 5,
+      //   url: 'https://miao.su/images/2019/02/18/wu9f062.jpg'
+      // },
+      // {
+      //   id: 6,
+      //   url: 'https://miao.su/images/2019/02/18/he739b3.md.jpg'
+      // }
     ],
     // 课程列表数据
       classData:[
-        {
-          id: 1,
-          // 布尔类型为1时表示该课程是线下课程
-          boo:1,
-          line_is:"线下课程",
-          url: 'https://miao.su/images/2019/02/18/guoxue8a7df.md.jpg',
-          whoColumn: '董老师课程',
-          howPeople: 1002,
-          price: '688.00',
-          title: "风水国学",
-          classCount: "信息",
-          other: '热销中...',
-          integral: 0.15,
-          howIntegral: 8,
-          inCount: 88,
-          popBoo: 0,
-          number: 1,
-          class_try_read:0,
-          introduce: "人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！"
-        }
+        // {
+        //   id: 1,
+        //   // 布尔类型为1时表示该课程是线下课程
+        //   boo:1,
+        //   line_is:"线下课程",
+        //   url: 'https://miao.su/images/2019/02/18/guoxue8a7df.md.jpg',
+        //   whoColumn: '董老师课程',
+        //   howPeople: 1002,
+        //   price: '688.00',
+        //   title: "风水国学",
+        //   classCount: "信息",
+        //   other: '热销中...',
+        //   integral: 0.15,
+        //   howIntegral: 8,
+        //   inCount: 88,
+        //   popBoo: 0,
+        //   number: 1,
+        //   class_try_read:0,
+        //   introduce: "人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！"
+        // }
       ],
       canGo:false,
     show_boo:false,
@@ -129,6 +130,50 @@ Page({
     },
     the_list:''
 
+  },
+  changeData(e){
+    
+    if (e.detail.value.replace(/\s*/g, '').length == 0){
+      wx.request({
+        url: domain + '/api/class/getClass',
+        method: 'POST',
+        success: res => {
+          this.setData({
+            classData: res.data
+          });
+        }
+      })
+    }
+    this.setData({
+      inputData:e.detail.value
+    });
+    
+  },
+  search(){
+    if(!this.data.inputData.replace(/\s*/g,'')){
+      return false;
+    }
+    wx.showLoading({
+      title: "拼命搜索中..."
+    });
+    wx.request({
+      url: domain+'/api/msg/shopSearch',
+      method:'post',
+      data:{
+        msg:this.data.inputData
+      },
+      success:res=>{
+        
+        this.setData({
+          classData:res.data
+        })
+        wx.hideLoading();
+      },
+      fail: () => {
+        wx.hideLoading();
+      }
+
+    })
   },
   changeModuleShow(attr){
     this.setData({
@@ -213,6 +258,25 @@ Page({
     wx.showLoading({
       title: "加载中"
     });
+    wx.request({
+      url: domain + '/api/bannerShop/list',
+      method: 'POST',
+      success: res => {
+        // console.log(res.data)
+        this.setData({
+          bannerSrc: res.data
+        });
+        
+       
+
+      },
+      fail: () => {
+    
+      }
+
+
+    })
+   
     wx.request({
       url: domain+'/api/class/getClass',
       method:'POST',

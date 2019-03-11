@@ -29,7 +29,7 @@ Page({
     ],
     imgMsgData:{
       img1:"https://miao.su/images/2019/02/18/rong1d86b.md.jpg",
-      img2:"https://miao.su/images/2019/02/18/yuanfd7d8.md.jpg"
+      img2:"https://www.miao.su/images/2019/03/11/ceoba6bf.png"
     }
     
   },

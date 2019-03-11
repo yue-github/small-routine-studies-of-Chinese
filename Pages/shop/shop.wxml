@@ -45,7 +45,13 @@
     <view class="content-detail">
 
       <view class="class-container" wx:if="{{module_obj.m_fir}}">
-        <block wx:for="{{classData}}" wx:key="key">
+        <view class="warn-null change-margin" wx:if="{{classData.length==0?true:false}}">
+          <image src="../image/sorry.png" class="warn-null-img img-change"></image>
+          <text class="warn-null-space">
+                {{the_list}}暂无相关商品...
+          </text>
+        </view>
+        <block wx:for="{{classData}}" wx:key="key" wx:if="{{classData.length==0?false:true}}">
           <view class="class-detail" catchtap="goPay" data-try="{{item.class_try_read}}" data-item="{{item}}" data-boo="{{item.boo}}">
             <image src="{{item.url}}" class="detail-img"></image>
             <view class="class-right">

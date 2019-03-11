@@ -195,5 +195,23 @@ overflow:hidden;
 .change-f-color3{
   color:#000;
 }
+.addClassDetail{
+  width:100%;
+  display:flex;
+  align-items: center;
+}
+.class-title{
+  width:350rpx;
+  white-space: wrap;
+  word-break: break-all;
+}
+.delete-logo{
+  width:50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color:#f40;
+  margin-left:auto;
+}
  
  

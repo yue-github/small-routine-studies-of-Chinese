@@ -12,7 +12,17 @@ App({
     erweima:""
   },
   onLaunch: function () {
-    
+
+    // 统计访问量
+    wx.request({
+      url: this.globalData.domain + '/api/visit/addVisit',
+      method: 'POST'
+    })
+    if (wx.getStorageSync('idObj') && wx.getStorageSync('userInfo')) {
+      this.globalData.idObj = JSON.parse(wx.getStorageSync('idObj'));
+      this.globalData.userInfo = JSON.parse(wx.getStorageSync('userInfo'));
+      return false;
+    }
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -37,6 +47,7 @@ App({
               // console.log(res)
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
+              wx.setStorageSync('userInfo', JSON.stringify(res.userInfo))
               wx.login({
                 success: res => {
                 
@@ -47,6 +58,7 @@ App({
                     success: res => {
                        
                       this.globalData.idObj = res.data;
+                      wx.setStorageSync('idObj', JSON.stringify(res.data ));
                      
                       wx.request({
                         url: this.globalData.domain+"/api/user/getUserInfo",
@@ -94,17 +106,17 @@ App({
             data:json,
             responseType: 'stream',
             success:data=>{
-              
-              wx.request({
-                url: this.globalData.domain+'/api/change2Code',
-                method:"POST",
-                data:{
-                  code:encodeURI(data.data)
-                },
-                success:res=>{
+              console.log(data)
+              // wx.request({
+              //   url: this.globalData.domain+'/api/change2Code',
+              //   method:"POST",
+              //   data:{
+              //     code:encodeURI(data.data)
+              //   },
+              //   success:res=>{
                    
-                }
-              })
+              //   }
+              // })
               // this.globalData.erweima = "data:image/jpeg;base64," + encodeURI(data.data);
               
             }
