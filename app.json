@@ -1,8 +1,11 @@
 {
   "pages":[
     "Pages/index/index",
-    "Pages/homeSearch/homeSearch",
+    "Pages/moreCompanyData/moreCompanyData",
     "Pages/companyIntroduce/companyIntroduce",
+    "Pages/concact/concact",
+    
+    "Pages/homeSearch/homeSearch",
     "Pages/shop/shop",
     "Pages/mySet/mySet",
     "Pages/myTuiGuang/myTuiGuang",
@@ -15,8 +18,8 @@
     "Pages/class/class",
     "Pages/payMethod/payMethod",
     "Pages/newPage/newPage",
-    "Pages/moreCompanyData/moreCompanyData",
-    "Pages/concact/concact",
+    
+    
     "Pages/radio/radio",
     
     "Pages/saoma/saoma",

@@ -10,7 +10,7 @@
            </view>
            <block wx:for="{{moreData}}" wx:key="key">
            <view class="content">
-                <view class="content-title">{{item.title}}</view><text wx:if="{{item.srcShow}}" class="changeNavColor" catchtap="goLook">{{item.src}}</text>
+                <view class="content-title">{{item.title}}</view><text wx:if="{{item.srcShow==1?true:false}}" class="changeNavColor" catchtap="goLook">{{item.src}}</text>
                 <image class="content-img" src="{{item.img}}"></image>
            </view>
            </block>

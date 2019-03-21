@@ -10,22 +10,22 @@ Page({
     companyName: getApp().globalData.companyName,
       moreData:[
         {
-          title: "區洛锜老师接受中央电视台采访网页：",
-          src:'https://v.qq.com/x/page/r073025cbcf.html',
-          img: "https://miao.su/images/2019/02/18/img1d1c76.md.jpg",
+          title: "加载中...",
+          src:'',
+          img: "",
           srcShow:true
         },
         {
-          title: "易学泰斗张志哲教授和易学泰斗邵伟华大师参加明正道大学堂开业仪式",
-          img: "https://miao.su/images/2019/02/18/img2882bf.md.jpg"
+          title: "加载中...",
+          img: ""
         },
         {
-           title: "广东电视台主持人和杨公风水传承人杨院长参加明正道开业仪式",
-          img: "https://miao.su/images/2019/02/18/img49528e.md.jpg"
+          title: "加载中...",
+          img: ""
         },
         {
-          title: "明正道大学堂區洛锜导师被江西龙虎山群仙会聘为百位道家长老之一",
-          img: "https://miao.su/images/2019/02/18/img3e3701.md.jpg"
+          title: "加载中...",
+          img: ""
         }
         
       ]
@@ -80,7 +80,23 @@ Page({
    */
   onReady: function () {
    
-    wx.hideLoading();
+    const globalData = getApp().globalData;
+    wx.request({
+      url: globalData.domain + '/api/nose/getMoreComData',
+      method: 'post',
+      success: res => {
+         
+        this.setData({
+          moreData:res.data
+        });
+        wx.hideLoading();
+
+      },
+      fail: res => {
+        wx.hideLoading();
+      }
+
+    })
   },
 
   /**

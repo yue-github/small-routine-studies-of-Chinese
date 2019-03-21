@@ -6,10 +6,10 @@ Page({
    */
   data: {
     concactData:{
-      phone:"13926463131",
-      qq:"275972481",
-      mail:"275972481@qq.com",
-      address:"广州市黄埔区双岗黄岗大街富鸿里6号"
+      phone:"加载中...",
+      qq:"加载中...",
+      email:"加载中...",
+      address:"加载中..."
     }
   },
   goTabBar() {
@@ -55,8 +55,23 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    const globalData=getApp().globalData;
+    wx.request({
+      url: globalData.domain +'/api/nose/getCompanyContact',
+      method:'post',
+      success:res=>{
+        this.setData({
+          concactData:res.data[0]
+        });
+        wx.hideLoading();
+         
+      },
+      fail:res=>{
+        wx.hideLoading();
+      }
+
+    })
    
-    wx.hideLoading();
   },
 
   /**

@@ -15,7 +15,7 @@
                         <text class="fa fa-qq change-blue"></text><text class="margin-font">QQ：{{concactData.qq}}</text>
                     </view>
                     <view class="addWidth">
-                        <text class="fa fa-envelope change-blue"></text><text class="margin-font">邮箱：{{concactData.mail}}</text>
+                        <text class="fa fa-envelope change-blue"></text><text class="margin-font">邮箱：{{concactData.email}}</text>
                     </view>
                   </view>
                      <view class="address">
