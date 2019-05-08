@@ -6,7 +6,7 @@ App({
     secret: "9850092e558a13e91cbe2cfce87eda31",
     idObj:{},
     
-    domain:'http://localhost/geomancy/public',
+    domain:'http://gdmzd.com/geomancy/public',
     logo:'https://miao.su/images/2019/02/18/logof015a.png',
     companyName:"明正道大学堂",
     erweima:""
